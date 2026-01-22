@@ -9,11 +9,10 @@ const Hero = ({ onQuoteClick }) => {
     <section id="home" className="hero">
       <div className="container hero-container">
         <div className="hero-content reveal">
-          <h1>Engineering the <span className="accent">Future</span></h1>
+          <h1>Delivering Precision <span className="accent">Across Australia</span></h1>
           <p className="hero-subtitle">
-            Three decades of technical mastery in high-stakes infrastructure,
-            luxury residential developments, and premium commercial spaces
-            architected for the Australian landscape.
+            Complex infrastructure, premium residential, and high-performance commercial projects
+            engineered with transparency, safety, and technical excellence.
           </p>
           <div className="hero-btns">
             <a href="#portfolio" className="btn btn-primary">Our Portfolio</a>
@@ -28,13 +27,17 @@ const Hero = ({ onQuoteClick }) => {
           <div className="stack-item item-secondary">
             <img src={commImg} alt="Secondary project" />
           </div>
-          <div className="stack-item item-tertiary">
-            <img src={resImg} alt="Tertiary project" />
-          </div>
 
           {/* Decorative elements to match screenshot */}
           <div className="stack-decorator decorator-1"></div>
           <div className="stack-decorator decorator-2"></div>
+
+          {/* Supporting Text Block */}
+          <div className="hero-info-card">
+            <p>
+              Finepoint Projects is an Australian construction specialist delivering technically complex builds across commercial, residential, and government sectors. With decades of combined leadership experience, ISO-aligned systems, and a hands-on delivery model, we provide end-to-end construction solutions that minimise risk, protect reputations, and maximise long-term asset value—without compromise.
+            </p>
+          </div>
         </div>
       </div>
       <div className="hero-scroll-indicator">

@@ -84,11 +84,46 @@
     align-items: center;
 }
 
-.accordion-image {
+/* Images Wrapper for Collage Effect */
+.accordion-images-wrapper {
+    position: relative;
     width: 100%;
-    aspect-ratio: 16 / 10;
+    aspect-ratio: 16 / 12;
+    display: flex;
+    align-items: center;
+}
+
+.accordion-image.main {
+    width: 85%;
+    height: 90%;
     overflow: hidden;
-    border-radius: 4px;
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.accordion-images-wrapper:not(.has-secondary) .accordion-image.main {
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+}
+
+.accordion-image.secondary {
+    position: absolute;
+    bottom: -20px;
+    right: -10px;
+    width: 55%;
+    height: 60%;
+    overflow: hidden;
+    border-radius: 24px;
+    border: 10px solid var(--bg-dark);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    z-index: 2;
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.accordion-item.active .accordion-image.secondary {
+    transform: translateY(-20px);
 }
 
 .accordion-image img {
@@ -111,22 +146,61 @@
 }
 
 .text-wrapper {
-    max-width: 450px;
+    max-width: 550px;
+    /* Increased for better paragraph flow */
 }
 
 .text-wrapper h3 {
-    font-size: 1.8rem;
-    font-weight: 700;
+    font-size: 3.5rem;
+    font-weight: 600;
     margin-bottom: 2rem;
-    line-height: 1.4;
+    line-height: 1.2;
     color: var(--text-primary);
+    letter-spacing: -1px;
 }
 
 .text-wrapper p {
-    font-size: 1.1rem;
-    line-height: 1.7;
+    font-size: 1.15rem;
+    line-height: 1.6;
     color: var(--text-secondary);
-    margin-bottom: 3rem;
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+}
+
+/* Mission Points List */
+.mission-points {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.mission-points li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.2rem;
+    font-size: 1.15rem;
+    font-weight: 500;
+    line-height: 1.4;
+    color: var(--text-secondary);
+    transition: all 0.3s ease;
+}
+
+.mission-points li:hover {
+    color: var(--text-primary);
+    transform: translateX(10px);
+}
+
+.checkmark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4CAF50;
+    /* Vibrant Green */
+    flex-shrink: 0;
+    margin-top: 2px;
+    filter: drop-shadow(0 0 5px rgba(76, 175, 80, 0.3));
 }
 
 .read-more-btn {
@@ -187,6 +261,14 @@
     background: rgba(0, 0, 0, 0.08);
 }
 
+.light-theme .mission-points li {
+    color: #333;
+}
+
+.light-theme .accordion-image.secondary {
+    border-color: #ffffff;
+}
+
 /* Responsive */
 @media (max-width: 1024px) {
     .accordion-grid {
@@ -198,18 +280,35 @@
     .accordion-grid {
         grid-template-columns: 1fr;
         padding: 2rem 0 4rem;
+        gap: 3rem;
     }
 
     .accordion-header h2 {
         font-size: clamp(2.5rem, 8vw, 4rem);
     }
 
-    .accordion-image {
+    .accordion-images-wrapper {
         order: 1;
+        aspect-ratio: 16 / 11;
+        margin-bottom: 2rem;
+    }
+
+    .accordion-image.secondary {
+        bottom: -10px;
+        right: 0px;
+        border: 6px solid var(--bg-dark);
     }
 
     .accordion-content {
         order: 2;
+    }
+
+    .text-wrapper h3 {
+        font-size: 2.5rem;
+    }
+
+    .mission-points li {
+        font-size: 1.1rem;
     }
 }
 
