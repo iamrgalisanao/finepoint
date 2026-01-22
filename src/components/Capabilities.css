@@ -1,0 +1,191 @@
+.capabilities {
+    background-color: transparent;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.section-header .subtitle {
+    display: block;
+    color: var(--primary);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    color: var(--text-primary);
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.section-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary);
+}
+
+.capabilities-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.capability-card {
+    position: relative;
+    background-color: var(--bg-card);
+    padding: 4rem 2rem;
+    text-align: center;
+    overflow: hidden;
+    transition: var(--transition-smooth);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+}
+
+.card-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    z-index: 1;
+}
+
+.capability-card:hover .card-bg {
+    opacity: 0.4;
+    transform: scale(1.1);
+    filter: brightness(0.3);
+}
+
+.light-theme .capability-card:hover .card-bg {
+    filter: brightness(1.2) contrast(0.8);
+    opacity: 0.2;
+}
+
+.capability-card:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    background-color: #1c1c1d;
+    border-color: var(--primary);
+    transform: translateY(-10px);
+}
+
+.light-theme .capability-card:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    background-color: #f8f9fa;
+}
+
+.card-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}
+
+.icon-wrapper {
+    color: var(--primary);
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.capability-card:hover .icon-wrapper {
+    transform: translateY(-5px) scale(1.1);
+}
+
+.capability-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+    font-family: var(--font-heading);
+}
+
+.capability-card p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    max-width: 260px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: var(--transition-smooth);
+}
+
+.capability-card:hover h3 {
+    color: white;
+}
+
+.capability-card:hover p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.light-theme .capability-card:hover h3 {
+    color: var(--text-primary);
+}
+
+.light-theme .capability-card:hover p {
+    color: var(--text-secondary);
+}
+
+.btn-learn {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 0.8rem 2.5rem;
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    border-radius: 4px;
+}
+
+.btn-learn:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(197, 160, 89, 0.15);
+}
+
+@media (max-width: 992px) {
+    .capabilities-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .capabilities-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .capability-card {
+        min-height: 280px;
+        padding: 3rem 1.5rem;
+    }
+
+    .capability-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .capability-card p {
+        font-size: 0.9rem;
+        margin-bottom: 2rem;
+    }
+}
