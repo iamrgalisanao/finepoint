@@ -43,7 +43,8 @@
 }
 
 .accordion-item.active .accordion-header h2 {
-    color: #111;
+    color: var(--primary);
+    /* Orange when opened */
 }
 
 .accordion-line {
@@ -167,6 +168,11 @@
 .light-theme .accordion-header h2,
 .light-theme .text-wrapper h3 {
     color: #1a1a1a;
+}
+
+/* Specific override to keep active state orange in light theme */
+.light-theme .accordion-item.active .accordion-header h2 {
+    color: var(--primary);
 }
 
 .light-theme .text-wrapper p {
