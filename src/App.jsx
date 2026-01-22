@@ -115,7 +115,7 @@ const projects = [
 
 function App() {
   const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false);
-  const [theme, setTheme] = useState('dark');
+  const [theme, setTheme] = useState('light');
   const { pathname, hash } = useLocation();
 
   useEffect(() => {
