@@ -1,56 +1,64 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './About.css';
 
 const About = () => {
+    const [activeIndex, setActiveIndex] = useState(0);
+
+    const values = [
+        {
+            title: "Our mission",
+            heading: "Lastly, custom building will get you more for your money. With custom homes.",
+            description: "You may also realize cost savings from your energy efficient choices in your custom home. Federal tax credits for some green materials can allow you to deduct as much.",
+            image: "https://images.unsplash.com/photo-1504307651254-35680f3366d4?q=80&w=2000&auto=format&fit=crop", // Construction site visual
+        },
+        {
+            title: "Our vision",
+            heading: "Pioneering Sustainable Urban Transformation for the next generation.",
+            description: "We envision a future where infrastructure and environment coexist in perfect harmony, powered by technological innovation and environmental stewardship through advanced engineering.",
+            image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2000&auto=format&fit=crop", // Modern skyscraper architectural
+        },
+        {
+            title: "Our expertise",
+            heading: "Engineering Mastery for Complex Challenges and large-scale infrastructure.",
+            description: "Our team combines decades of field experience with cutting-edge BIM technology to deliver infrastructure projects that define excellence and stand the test of time.",
+            image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=2000&auto=format&fit=crop", // High-tech engineering/BIM workspace
+        }
+    ];
+
     return (
-        <section id="about" className="section">
+        <section id="about" className="section about-section">
             <div className="container">
-                <div className="about-grid">
-                    <div className="about-content reveal">
-                        <div className="section-title" style={{ textAlign: 'left' }}>
-                            <h2>Precision Engineering <br /><span className="accent">With a Vision</span></h2>
-                            <div className="underline" style={{ margin: '0' }}></div>
-                        </div>
-                        <p>
-                            Finepoint Projects has been at the forefront of the Australian construction industry for over three decades.
-                            We specialize in delivering high-complexity infrastructure and luxury developments that stand the test of time.
-                        </p>
-                        <p>
-                            Our approach integrates advanced 5D BIM technology with traditional engineering mastery,
-                            ensuring that every project is executed with surgical precision and financial transparency.
-                        </p>
-                        <div className="about-stats-mini">
-                            <div>
-                                <h4>Legacy</h4>
-                                <p>30+ years of operational excellence across Australia.</p>
+                <div className="accordion-container">
+                    {values.map((item, index) => (
+                        <div
+                            key={index}
+                            className={`accordion-item ${activeIndex === index ? 'active' : ''}`}
+                        >
+                            <div
+                                className="accordion-header"
+                                onClick={() => setActiveIndex(index)}
+                            >
+                                <h2>{item.title}</h2>
+                                <div className="accordion-line"></div>
                             </div>
-                            <div>
-                                <h4>Innovation</h4>
-                                <p>Leading the industry in digital twin and BIM integration.</p>
+                            <div className="accordion-body">
+                                <div className="accordion-grid">
+                                    <div className="accordion-image">
+                                        <img src={item.image} alt={item.title} />
+                                    </div>
+                                    <div className="accordion-content">
+                                        <div className="text-wrapper">
+                                            <h3>{item.heading}</h3>
+                                            <p>{item.description}</p>
+                                            <button className="read-more-btn">
+                                                <span className="arrow">↗</span> READ MORE
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div className="about-card reveal">
-                        <h3>Our Core Values</h3>
-                        <ul>
-                            <li>
-                                <span className="check">✔</span>
-                                <span><strong>Uncompromising Integrity</strong> in every contract and joint venture.</span>
-                            </li>
-                            <li>
-                                <span className="check">✔</span>
-                                <span><strong>Technical Superiority</strong> through continuous R&D and training.</span>
-                            </li>
-                            <li>
-                                <span className="check">✔</span>
-                                <span><strong>Safety Leadership</strong> that exceeds national standards.</span>
-                            </li>
-                            <li>
-                                <span className="check">✔</span>
-                                <span><strong>Environmental Stewardship</strong> in large-scale urban development.</span>
-                            </li>
-                        </ul>
-                    </div>
+                    ))}
                 </div>
             </div>
         </section>
