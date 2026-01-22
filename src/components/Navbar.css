@@ -25,7 +25,7 @@
 
 /* Utils */
 .mobile-only {
-    display: none;
+    display: none !important;
 }
 
 .desktop-only {
@@ -195,7 +195,7 @@
 
 @media (max-width: 992px) {
     .mobile-only {
-        display: flex;
+        display: flex !important;
     }
 
     .desktop-only {
