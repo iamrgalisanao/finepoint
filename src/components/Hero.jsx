@@ -1,7 +1,7 @@
 import React from 'react';
 import './Hero.css';
-import govImg from '../assets/img/NBN/Photo2.jpg';
-import commImg from '../assets/img/GranvilleC/img001.jpeg';
+import govImg from '../assets/img/Commercial/NBN/Photo2.jpg';
+import commImg from '../assets/img/Residential/GranvilleC/img001.jpeg';
 import resImg from '../assets/portfolio_all_1768919396029.png';
 
 const Hero = ({ onQuoteClick }) => {
