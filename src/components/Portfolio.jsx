@@ -18,7 +18,7 @@ const Portfolio = ({ projects }) => {
         ? projects
         : projects.filter(p => p.category === filter);
 
-    const categories = ['All', 'Government', 'Residential', 'Commercial'];
+    const categories = ['All', ...new Set(projects.map(p => p.category))];
 
     return (
         <section id="portfolio" className="section portfolio">
