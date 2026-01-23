@@ -3,6 +3,14 @@ import govImg from '../assets/government/government_project_sample_1768918380000
 import commImg from '../assets/commercial/commercial_project_sample_1768918445563.png';
 import resImg from '../assets/portfolio_all_1768919396029.png'; // Placeholder for residential
 
+// Granville C Tower images
+import granville1 from '../assets/img/Residential/GranvilleC/img001.jpeg';
+import granville2 from '../assets/img/Residential/GranvilleC/img002.jpeg';
+import granville3 from '../assets/img/Residential/GranvilleC/img003.jpeg';
+import granville4 from '../assets/img/Residential/GranvilleC/img004.jpeg';
+import granville5 from '../assets/img/Residential/GranvilleC/img005.jpeg';
+import granville6 from '../assets/img/Residential/GranvilleC/img006.jpeg';
+
 export const projects = [
     {
         id: 1,
@@ -96,5 +104,36 @@ export const projects = [
         scopeConclusion: 'The innovative exoskeleton removes the need for internal pillars, maximizing usable floor space while enhancing structural integrity.',
         delivery: 'The project is currently tracking ahead of schedule for a early 2025 opening, setting a new benchmark for sustainable commercial developments in Australia.',
         images: [commImg, resImg, govImg]
+    },
+    {
+        id: 4,
+        slug: 'granville-c-tower',
+        title: 'Granville C Tower',
+        category: 'Residential',
+        location: 'Granville, NSW',
+        image: granville1,
+        year: '2024',
+        value: '$95M',
+        duration: '22 Months',
+        client: 'Granville Urban Living',
+        address: 'Granville Station Precinct, NSW',
+        description: 'A sophisticated urban residential landmark, blending modern architectural design with community-focused living spaces.',
+        overview: 'The Granville C Tower project represents a major milestone in urban rejuvenation, providing high-density luxury living with a focus on structural resilience and sustainable urban planning.',
+        highlights: [
+            'Integrated high-speed commuter access',
+            'Sustainable rainwater harvesting systems',
+            'Premium architectural glass facades',
+            'Communal sky lounge and gardens'
+        ],
+        highlightsConclusion: 'The tower has become a focal point of Granville’s new skyline, offering world-class amenities to its residents.',
+        scope: [
+            'Multi-level structural concrete framing',
+            'Architectural curtain wall installation',
+            'BIM-coordinated building services',
+            'High-end residential interior fit-outs'
+        ],
+        scopeConclusion: 'Precise engineering was required to coordinate construction activities in the high-traffic station precinct.',
+        delivery: 'Completed in mid-2024, Granville C Tower has achieved full occupancy and is praised for its seamless integration into the transport hub.',
+        images: [granville1, granville2, granville3, granville4, granville5, granville6]
     }
 ];
