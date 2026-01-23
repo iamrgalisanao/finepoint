@@ -7,23 +7,66 @@ const About = () => {
     const values = [
         {
             title: "Our Mission",
-            heading: "Crafting a Legacy of Excellence",
-            description: "At Finepoint, our mission is to redefine the landscape of modern construction through an unwavering commitment to architectural integrity and innovative engineering. We don't just build structures; we craft enduring environments that inspire progress and foster community resilience. By blending traditional craftsmanship with state-of-the-art sustainable technologies, we deliver landmark projects that exceed the highest standards of excellence.",
+            tagline: "Precision delivered. Trust built. Communities strengthened.",
+            heading: "Delivering Built Confidence",
+            description: (
+                <>
+                    <p>At Finepoint Projects, our mission is to deliver high-value construction solutions that balance technical excellence, safety, and long-term performance. We specialise in complex commercial, residential, and government projects—executed with transparency, disciplined project control, and a commitment to quality at every stage.</p>
+                    <p style={{ marginTop: '1.5rem' }}>We don’t simply construct assets; we create resilient, functional environments that support communities, protect client reputations, and stand the test of time. Through strong leadership, proven systems, and collaborative delivery, we consistently transform design intent into built outcomes with certainty and confidence.</p>
+                </>
+            ),
             points: [
-                "Architectural Integrity & Precision Engineering",
-                "Sustainable Innovation for Future Generations",
-                "Client-First Partnership & Transparency",
-                "Community-Driven Urban Development"
+                {
+                    title: "Architectural Integrity & Precision Engineering",
+                    desc: "Delivering technically robust builds that align with design intent, compliance requirements, and real-world constructability."
+                },
+                {
+                    title: "Safety, Quality & Environmental Responsibility",
+                    desc: "Operating under ISO-aligned HSEQ frameworks to protect people, assets, and the environment across every project."
+                },
+                {
+                    title: "Client-First Partnership & Transparency",
+                    desc: "Providing clear documentation, proactive communication, and full visibility—enabling informed decision-making and reduced project risk."
+                },
+                {
+                    title: "Community-Focused Infrastructure & Development",
+                    desc: "Creating public, civic, and private spaces that enhance usability, accessibility, and long-term community value."
+                }
             ],
-            image: "https://images.unsplash.com/photo-1503387762-592dea58fe21?q=80&w=2000&auto=format&fit=crop", // Elegant architectural detail
-            secondaryImage: "https://images.unsplash.com/photo-1590644365607-1c5a519a7a37?q=80&w=2000&auto=format&fit=crop" // Professional planning session
+            image: "/img/Photo8.jpg",
+            secondaryImage: "/img/Photo5.jpg"
         },
         {
             title: "Our Vision",
-            heading: "Defining the Future of Built Environments",
-            description: "We envision a world where every structure contributes to a more sustainable and connected future. Our goal is to be the global benchmark for construction excellence, pioneering new methods of building that prioritize both human experience and environmental stewardship.",
-            image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2000&auto=format&fit=crop",
-            secondaryImage: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2000&auto=format&fit=crop"
+            tagline: "To lead with integrity, build with precision, and deliver lasting value through trusted construction partnerships.",
+            heading: "Setting the Standard for Trusted Construction Delivery",
+            reversed: true,
+            description: (
+                <>
+                    <p>Our vision is to be a trusted construction partner recognised for delivering complex, high-impact projects with certainty, integrity, and technical excellence. We aspire to set the benchmark for specialist construction delivery across Australia—where quality, safety, and transparency are embedded in every outcome.</p>
+                    <p style={{ marginTop: '1.5rem' }}>Through disciplined systems, experienced leadership, and collaborative delivery, Finepoint Projects aims to shape resilient built environments that serve communities, support economic growth, and endure for generations. We envision a future where construction excellence is defined not by scale alone, but by precision, accountability, and long-term value.</p>
+                </>
+            ),
+            points: [
+                {
+                    title: "Leadership in Complex & High-Risk Construction",
+                    desc: "Becoming the specialist contractor of choice for technically demanding commercial, residential, and government projects."
+                },
+                {
+                    title: "Enduring Quality & Asset Longevity",
+                    desc: "Delivering structures and infrastructure designed for durability, performance, and whole-of-life value."
+                },
+                {
+                    title: "Safety, Sustainability & Responsible Growth",
+                    desc: "Advancing safe, environmentally responsible construction practices that protect people, places, and future generations."
+                },
+                {
+                    title: "Partnership-Driven Industry Impact",
+                    desc: "Building long-term relationships founded on trust, transparency, and shared success with clients and communities."
+                }
+            ],
+            image: "/img/vision_main.png",
+            secondaryImage: "/img/vision_secondary.png"
         },
         {
             title: "Our Expertise",
@@ -51,7 +94,7 @@ const About = () => {
                                 <div className="accordion-line"></div>
                             </div>
                             <div className="accordion-body">
-                                <div className="accordion-grid">
+                                <div className={`accordion-grid ${item.reversed ? 'reversed' : ''}`}>
                                     <div className={`accordion-images-wrapper ${item.secondaryImage ? 'has-secondary' : ''}`}>
                                         <div className="accordion-image main">
                                             <img src={item.image} alt={item.title} />
@@ -64,8 +107,9 @@ const About = () => {
                                     </div>
                                     <div className="accordion-content">
                                         <div className="text-wrapper">
+                                            {item.tagline && <span className="tagline">{item.tagline}</span>}
                                             <h3>{item.heading}</h3>
-                                            <p>{item.description}</p>
+                                            <div className="description">{item.description}</div>
 
                                             {item.points && (
                                                 <ul className="mission-points">
@@ -76,7 +120,10 @@ const About = () => {
                                                                     <polyline points="20 6 9 17 4 12"></polyline>
                                                                 </svg>
                                                             </span>
-                                                            {point}
+                                                            <div className="point-content">
+                                                                <strong>{point.title}</strong>
+                                                                <p>{point.desc}</p>
+                                                            </div>
                                                         </li>
                                                     ))}
                                                 </ul>

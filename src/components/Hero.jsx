@@ -1,7 +1,7 @@
 import React from 'react';
 import './Hero.css';
-import govImg from '../assets/government/government_project_sample_1768918380000.png';
-import commImg from '../assets/commercial/commercial_project_sample_1768918445563.png';
+import govImg from '../assets/img/NBN/Photo2.jpg';
+import commImg from '../assets/img/GranvilleC/img001.jpeg';
 import resImg from '../assets/portfolio_all_1768919396029.png';
 
 const Hero = ({ onQuoteClick }) => {
@@ -35,8 +35,12 @@ const Hero = ({ onQuoteClick }) => {
           {/* Supporting Text Block */}
           <div className="hero-info-card">
             <p>
-              Finepoint Projects is an Australian construction specialist delivering technically complex builds across commercial, residential, and government sectors. With decades of combined leadership experience, ISO-aligned systems, and a hands-on delivery model, we provide end-to-end construction solutions that minimise risk, protect reputations, and maximise long-term asset value—without compromise.
+              Finepoint Projects is an Australian construction specialist delivering technically complex builds across commercial,
+              residential, and government sectors. With decades of combined leadership experience,
+              ISO-aligned systems, and a hands-on delivery model, we provide end-to-end construction solutions that minimise risk,
+              protect reputations, and maximise long-term asset value without compromise.
             </p>
+            <div className="card-tagline">Precision delivered. Trust built. Communities strengthened.</div>
           </div>
         </div>
       </div>
