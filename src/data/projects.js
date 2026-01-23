@@ -11,6 +11,12 @@ import granville4 from '../assets/img/Residential/GranvilleC/img004.jpeg';
 import granville5 from '../assets/img/Residential/GranvilleC/img005.jpeg';
 import granville6 from '../assets/img/Residential/GranvilleC/img006.jpeg';
 
+// NBN Project images
+import nbn1 from '../assets/img/Commercial/NBN/Photo1.jpg';
+import nbn2 from '../assets/img/Commercial/NBN/Photo2.jpg';
+import nbn3 from '../assets/img/Commercial/NBN/Photo3.jpg';
+import nbn4 from '../assets/img/Commercial/NBN/Photo4.jpg';
+
 export const projects = [
     {
         id: 1,
@@ -135,5 +141,36 @@ export const projects = [
         scopeConclusion: 'Precise engineering was required to coordinate construction activities in the high-traffic station precinct.',
         delivery: 'Completed in mid-2024, Granville C Tower has achieved full occupancy and is praised for its seamless integration into the transport hub.',
         images: [granville1, granville2, granville3, granville4, granville5, granville6]
+    },
+    {
+        id: 5,
+        slug: 'nbn-infrastructure-hub',
+        title: 'NBN Network Hub & Infrastructure',
+        category: 'Government',
+        location: 'Multiple Locations, NSW',
+        image: nbn2,
+        year: '2024',
+        value: '$180M',
+        duration: '24 Months',
+        client: 'NBN Co',
+        address: 'Sydney Metro & Regional NSW',
+        description: 'Critical telecommunications infrastructure rollout including high-security facility upgrades and network node integration.',
+        overview: 'The NBN Network Hub project involved the delivery of technically complex telecommunications facilities designed to house critical network hardware. These high-security environments required integrated climate control, redundant power systems, and specialist structural steel frameworks to support delicate equipment in both urban and remote coastal environments.',
+        highlights: [
+            'Grade-A security integration',
+            'Precision climate control systems',
+            'Redundant power infrastructure',
+            'Civil and structural upgrades'
+        ],
+        highlightsConclusion: 'These facilities now serve as the backbone for high-speed connectivity across the region, meeting the highest standards of reliability and security.',
+        scope: [
+            'High-security facility fit-outs',
+            'Structural steel mezzanine construction',
+            'Specialised HVAC installations',
+            'Underground service coordination'
+        ],
+        scopeConclusion: 'All works were delivered within live network environments, requiring meticulous planning to avoid service interruptions.',
+        delivery: 'Successfully handed over in late 2024, the infrastructure meets all federal compliance standards and has significantly boosted network capacity.',
+        images: [nbn1, nbn2, nbn3, nbn4]
     }
 ];
