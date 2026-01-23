@@ -173,9 +173,21 @@
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
-    padding: 0 2rem;
+    padding: 5rem 4rem;
     position: relative;
     z-index: 2;
+    /* Soft 'light shade' highlight effect */
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(20px);
+    border-radius: 40px;
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    margin-bottom: 4rem;
+}
+
+.cs-content-body {
+    margin-top: -3rem;
+    /* Overlap slightly for a continuous shade look */
 }
 
 .cs-intro-text {
