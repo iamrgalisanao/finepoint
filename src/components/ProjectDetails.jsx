@@ -1,11 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import './ProjectDetails.css';
-import logoImg from '../assets/logo.png';
 
 const ProjectDetails = ({ projects }) => {
     const { slug } = useParams();
     const project = projects.find(p => p.slug === slug);
+    const [selectedImage, setSelectedImage] = useState(null);
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -60,7 +60,11 @@ const ProjectDetails = ({ projects }) => {
                 {/* Thumbnail Gallery Overlay */}
                 <div className="cs-gallery-strip">
                     {project.images?.map((img, idx) => (
-                        <div key={idx} className="cs-thumb">
+                        <div
+                            key={idx}
+                            className="cs-thumb"
+                            onClick={() => setSelectedImage(img)}
+                        >
                             <img src={img} alt={`${project.title} view ${idx + 1}`} />
                         </div>
                     ))}
@@ -104,6 +108,16 @@ const ProjectDetails = ({ projects }) => {
                     <Link to="/#portfolio" className="btn btn-outline">← Back to Portfolio</Link>
                 </div>
             </div>
+
+            {/* Lightbox Modal */}
+            {selectedImage && (
+                <div className="cs-modal" onClick={() => setSelectedImage(null)}>
+                    <span className="cs-modal-close" onClick={() => setSelectedImage(null)}>&times;</span>
+                    <div className="cs-modal-content" onClick={(e) => e.stopPropagation()}>
+                        <img src={selectedImage} alt="Full screen preview" />
+                    </div>
+                </div>
+            )}
         </div>
     );
 };

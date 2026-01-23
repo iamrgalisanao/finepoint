@@ -319,3 +319,92 @@
     }
 
 }
+
+/* Image Modal Lightbox */
+.cs-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: zoom-out;
+    animation: fadeInModal 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cs-modal-content {
+    max-width: 50%;
+    max-height: 80vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: zoomInModal 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cs-modal-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 50px 100px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cs-modal-close {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    color: #ffffff;
+    font-size: 60px;
+    font-weight: 200;
+    cursor: pointer;
+    line-height: 0.5;
+    transition: all 0.3s ease;
+    z-index: 2001;
+    opacity: 0.7;
+}
+
+.cs-modal-close:hover {
+    color: var(--primary);
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+@keyframes fadeInModal {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes zoomInModal {
+    from {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.cs-thumb {
+    cursor: zoom-in;
+}
+
+@media (max-width: 768px) {
+    .cs-modal-close {
+        top: 20px;
+        right: 20px;
+        font-size: 40px;
+    }
+}
