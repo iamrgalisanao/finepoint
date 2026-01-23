@@ -208,8 +208,7 @@
     }
 
     .nav-cta {
-        padding: 8px 16px !important;
-        font-size: 0.75rem !important;
+        display: none !important;
     }
 
     .nav-top {
@@ -262,6 +261,15 @@
 
     .light-theme .mobile-menu a {
         color: var(--text-primary);
+    }
+
+    .mobile-cta {
+        display: block !important;
+        width: 80%;
+        text-align: center;
+        margin-top: 1rem;
+        font-size: 1.1rem !important;
+        padding: 1rem !important;
     }
 }
 

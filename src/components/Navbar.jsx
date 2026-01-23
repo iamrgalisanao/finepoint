@@ -88,6 +88,9 @@ const Navbar = ({ onQuoteClick, theme, toggleTheme }) => {
         <Link to="/#portfolio" onClick={() => setIsMenuActive(false)}>Case Studies</Link>
         <Link to="/#blog" onClick={() => setIsMenuActive(false)}>Blog & Insights</Link>
         <Link to="/#contact" onClick={() => setIsMenuActive(false)}>Contact Us</Link>
+        <button className="btn btn-primary nav-cta mobile-cta" onClick={() => { onQuoteClick(); setIsMenuActive(false); }}>
+          Get a Quote
+        </button>
       </div>
     </nav>
   );

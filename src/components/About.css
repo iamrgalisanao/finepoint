@@ -6,6 +6,10 @@
     /* Use theme variable */
 }
 
+#about {
+    scroll-margin-top: 100px;
+}
+
 .accordion-container {
     display: flex;
     flex-direction: column;
@@ -72,7 +76,7 @@
 }
 
 .accordion-item.active .accordion-body {
-    max-height: 800px;
+    max-height: 3000px;
     /* Large enough to fit content */
 }
 
