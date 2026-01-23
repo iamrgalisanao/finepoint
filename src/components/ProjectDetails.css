@@ -4,6 +4,11 @@
     padding-bottom: 5rem;
     color: #1a1a1a;
     font-family: 'Inter', sans-serif;
+    /* Full-width grid with 15% opacity */
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.15) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.15) 1px, transparent 1px);
+    background-size: 50px 50px;
 }
 
 .cs-hero {
@@ -148,20 +153,13 @@
     padding: 8rem 0;
     width: 100%;
     position: relative;
-    /* Grid expanded with 35% opacity as requested */
-    background-image:
-        linear-gradient(rgba(0, 0, 0, 0.35) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0, 0, 0, 0.35) 1px, transparent 1px),
-        linear-gradient(rgba(0, 0, 0, 0.35) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0, 0, 0, 0.35) 1px, transparent 1px);
-    background-size: 25px 25px, 25px 25px, 125px 125px, 125px 125px;
 }
 
 .cs-narrative::before {
     content: "REF: FP-DRW-CS";
     position: absolute;
     top: 4rem;
-    right: 4rem;
+    right: 2rem;
     font-family: 'Courier New', monospace;
     font-size: 10px;
     color: var(--primary);
