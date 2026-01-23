@@ -176,8 +176,8 @@
     padding: 5rem 4rem;
     position: relative;
     z-index: 2;
-    /* Soft 'light shade' highlight effect - reduced to 10% opacity */
-    background: rgba(255, 255, 255, 0.1);
+    /* Soft 'light shade' highlight effect - adjusted to 20% opacity */
+    background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(20px);
     border-radius: 40px;
     box-shadow: 0 40px 100px rgba(0, 0, 0, 0.05);
