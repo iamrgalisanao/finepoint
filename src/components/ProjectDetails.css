@@ -176,11 +176,11 @@
     padding: 5rem 4rem;
     position: relative;
     z-index: 2;
-    /* Soft 'light shade' highlight effect - nearly transparent to reveal grid subtly */
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(8px);
+    /* Crystal-clear shade highlight - 10% opacity with minimal blur to keep grid visible */
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(1px);
     border-radius: 40px;
-    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.03);
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.05);
     border: 1px solid rgba(0, 0, 0, 0.03);
     margin-bottom: 4rem;
 }
