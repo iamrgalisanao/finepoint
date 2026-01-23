@@ -70,10 +70,38 @@ const About = () => {
         },
         {
             title: "Our Expertise",
-            heading: "Technical Mastery Across Disciplines",
-            description: "From complex civil engineering to high-end residential finishes, our multi-disciplinary team brings a wealth of specialized knowledge to every project. We leverage advanced BIM modeling and precision logistics to ensure seamless execution from concept to completion.",
-            image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=2000&auto=format&fit=crop",
-            secondaryImage: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=2000&auto=format&fit=crop"
+            tagline: "Specialist Capability. Proven Delivery. Trusted Results.",
+            heading: "Specialist Capability. Proven Delivery. Trusted Results.",
+            description: (
+                <>
+                    <p>Finepoint Projects brings deep technical expertise across commercial, residential, and government construction, delivering complex projects in live, high-risk environments with precision and control. Our strength lies in combining specialist construction capability with disciplined project management, allowing us to execute technically demanding works while maintaining safety, quality, and program certainty.</p>
+                    <p style={{ marginTop: '1.5rem' }}>We operate at the intersection of engineering excellence, constructability, and compliance—supporting clients from early coordination through to successful project completion.</p>
+                </>
+            ),
+            points: [
+                {
+                    title: "Commercial Construction & Fit-Outs",
+                    desc: "We deliver high-quality commercial construction and fit-out projects within operational workplaces, ensuring minimal disruption and seamless integration with existing environments. Our experience includes complex internal structures, architectural steel, feature staircases, balustrades, and precision-installed finishes aligned with modern workplace design and performance requirements."
+                },
+                {
+                    title: "Residential & Mixed-Use Developments",
+                    desc: "Our residential expertise spans large-scale apartment buildings and mixed-use developments, delivering façade elements, balconies, architectural metalwork, and structural components designed for durability, safety, and aesthetic cohesion. We understand the coordination demands of multi-trade environments and deliver consistent outcomes across all levels of a development."
+                },
+                {
+                    title: "Government, Civic & Public Infrastructure",
+                    desc: "Finepoint Projects is experienced in delivering government and civic infrastructure projects, including public amenities, parks, aquatic facilities, and community buildings. We manage complex stakeholder environments, strict compliance requirements, and live public interfaces—delivering safe, accessible, and community-focused assets."
+                },
+                {
+                    title: "Specialised & Technical Construction Works",
+                    desc: "We specialise in technically complex scopes such as structural steelworks, substations, industrial facilities, and custom infrastructure builds. Our team applies advanced construction methodologies, precise sequencing, and rigorous quality controls to deliver high-risk works safely and efficiently."
+                },
+                {
+                    title: "Heritage Restoration & Asset Upgrades",
+                    desc: "Our heritage and restoration expertise focuses on preserving architectural significance while integrating contemporary construction solutions. We deliver sensitive upgrades that maintain historical integrity while meeting modern compliance, safety, and performance standards."
+                }
+            ],
+            image: "/img/expertise_main.png",
+            secondaryImage: "/img/expertise_secondary.png"
         }
     ];
 

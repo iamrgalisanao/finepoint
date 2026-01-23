@@ -109,14 +109,22 @@
 .accordion-images-wrapper {
     position: relative;
     width: 100%;
+    max-width: 500px;
+    /* Constrain width to ensure centering is visible and doesn't look overwhelming */
+    justify-self: center;
+    /* Center the entire wrapper in the grid column */
     aspect-ratio: 16 / 12;
     display: flex;
     align-items: center;
+    justify-content: center;
+    transform: translateY(-30px);
 }
 
 .accordion-image.main {
     width: 85%;
     height: 90%;
+    margin: 0 auto;
+    /* Added for extra centering insurance */
     overflow: hidden;
     border-radius: 24px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
@@ -140,11 +148,30 @@
     border: 10px solid var(--bg-dark);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
     z-index: 2;
-    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    transform: translateY(0);
+    transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s ease;
 }
 
 .accordion-item.active .accordion-image.secondary {
-    transform: translateY(-20px);
+    animation: float-detail 4s ease-in-out infinite alternate;
+}
+
+@keyframes float-detail {
+    0% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(-30px);
+    }
+}
+
+/* Add a subtle extra hover effect for the secondary image */
+.accordion-image.secondary:hover {
+    animation-play-state: paused;
+    transform: translateY(-35px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+    transition: all 0.4s ease;
 }
 
 .accordion-image img {
