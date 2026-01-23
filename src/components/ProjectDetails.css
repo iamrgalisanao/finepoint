@@ -145,27 +145,39 @@
 
 /* Main Content Area */
 .cs-narrative {
-    padding: 8rem 2rem;
-    margin: 0 auto;
-    max-width: 800px;
+    padding: 8rem 0;
+    width: 100%;
     position: relative;
-    /* Optimal reading width */
+    /* Grid expanded with 35% opacity as requested */
     background-image:
-        linear-gradient(var(--grid-color) 1px, transparent 1px),
-        linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
-    background-size: 25px 25px;
+        linear-gradient(rgba(0, 0, 0, 0.35) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.35) 1px, transparent 1px),
+        linear-gradient(rgba(0, 0, 0, 0.35) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.35) 1px, transparent 1px);
+    background-size: 25px 25px, 25px 25px, 125px 125px, 125px 125px;
 }
 
 .cs-narrative::before {
     content: "REF: FP-DRW-CS";
     position: absolute;
-    top: 2rem;
-    right: 2rem;
+    top: 4rem;
+    right: 4rem;
     font-family: 'Courier New', monospace;
     font-size: 10px;
     color: var(--primary);
-    opacity: 0.4;
+    opacity: 0.35;
     letter-spacing: 1px;
+    z-index: 5;
+}
+
+.cs-intro-text,
+.cs-content-body {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 2;
 }
 
 .cs-intro-text {
