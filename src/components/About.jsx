@@ -12,7 +12,7 @@ const About = () => {
             description: (
                 <>
                     <p>At Finepoint Projects, our mission is to deliver high-value construction solutions that balance technical excellence, safety, and long-term performance. We specialise in complex commercial, residential, and government projects—executed with transparency, disciplined project control, and a commitment to quality at every stage.</p>
-                    <p style={{ marginTop: '1.5rem' }}>We don’t simply construct assets; we create resilient, functional environments that support communities, protect client reputations, and stand the test of time. Through strong leadership, proven systems, and collaborative delivery, we consistently transform design intent into built outcomes with certainty and confidence.</p>
+                    <p>We don’t simply construct assets; we create resilient, functional environments that support communities, protect client reputations, and stand the test of time. Through strong leadership, proven systems, and collaborative delivery, we consistently transform design intent into built outcomes with certainty and confidence.</p>
                 </>
             ),
             points: [
@@ -44,7 +44,7 @@ const About = () => {
             description: (
                 <>
                     <p>Our vision is to be a trusted construction partner recognised for delivering complex, high-impact projects with certainty, integrity, and technical excellence. We aspire to set the benchmark for specialist construction delivery across Australia—where quality, safety, and transparency are embedded in every outcome.</p>
-                    <p style={{ marginTop: '1.5rem' }}>Through disciplined systems, experienced leadership, and collaborative delivery, Finepoint Projects aims to shape resilient built environments that serve communities, support economic growth, and endure for generations. We envision a future where construction excellence is defined not by scale alone, but by precision, accountability, and long-term value.</p>
+                    <p>Through disciplined systems, experienced leadership, and collaborative delivery, Finepoint Projects aims to shape resilient built environments that serve communities, support economic growth, and endure for generations. We envision a future where construction excellence is defined not by scale alone, but by precision, accountability, and long-term value.</p>
                 </>
             ),
             points: [
@@ -75,29 +75,21 @@ const About = () => {
             description: (
                 <>
                     <p>Finepoint Projects brings deep technical expertise across commercial, residential, and government construction, delivering complex projects in live, high-risk environments with precision and control. Our strength lies in combining specialist construction capability with disciplined project management, allowing us to execute technically demanding works while maintaining safety, quality, and program certainty.</p>
-                    <p style={{ marginTop: '1.5rem' }}>We operate at the intersection of engineering excellence, constructability, and compliance—supporting clients from early coordination through to successful project completion.</p>
+                    <p>We operate at the intersection of engineering excellence, constructability, and compliance—supporting clients from early coordination through to successful project completion.</p>
                 </>
             ),
             points: [
                 {
                     title: "Commercial Construction & Fit-Outs",
-                    desc: "We deliver high-quality commercial construction and fit-out projects within operational workplaces, ensuring minimal disruption and seamless integration with existing environments. Our experience includes complex internal structures, architectural steel, feature staircases, balustrades, and precision-installed finishes aligned with modern workplace design and performance requirements."
+                    desc: "We deliver high-quality commercial construction and fit-out projects within operational workplaces, ensuring minimal disruption and seamless integration with existing environments."
                 },
                 {
                     title: "Residential & Mixed-Use Developments",
-                    desc: "Our residential expertise spans large-scale apartment buildings and mixed-use developments, delivering façade elements, balconies, architectural metalwork, and structural components designed for durability, safety, and aesthetic cohesion. We understand the coordination demands of multi-trade environments and deliver consistent outcomes across all levels of a development."
+                    desc: "Our residential expertise spans large-scale apartment buildings and mixed-use developments, delivering façade elements, balconies, and architectural metalwork."
                 },
                 {
                     title: "Government, Civic & Public Infrastructure",
-                    desc: "Finepoint Projects is experienced in delivering government and civic infrastructure projects, including public amenities, parks, aquatic facilities, and community buildings. We manage complex stakeholder environments, strict compliance requirements, and live public interfaces—delivering safe, accessible, and community-focused assets."
-                },
-                {
-                    title: "Specialised & Technical Construction Works",
-                    desc: "We specialise in technically complex scopes such as structural steelworks, substations, industrial facilities, and custom infrastructure builds. Our team applies advanced construction methodologies, precise sequencing, and rigorous quality controls to deliver high-risk works safely and efficiently."
-                },
-                {
-                    title: "Heritage Restoration & Asset Upgrades",
-                    desc: "Our heritage and restoration expertise focuses on preserving architectural significance while integrating contemporary construction solutions. We deliver sensitive upgrades that maintain historical integrity while meeting modern compliance, safety, and performance standards."
+                    desc: "Finepoint Projects is experienced in delivering government and civic infrastructure projects, including public amenities, parks, and aquatic facilities."
                 }
             ],
             image: "/img/expertise_main.png",
@@ -108,7 +100,28 @@ const About = () => {
     return (
         <section id="about" className="section about-section">
             <div className="container">
-                <div className="accordion-container">
+                <header className="creative-about-header reveal">
+                    <div className="header-layout">
+                        <div className="header-tag">
+                            <span className="index">01</span>
+                            <span className="divider"></span>
+                            <span className="label">WHO WE ARE</span>
+                        </div>
+                        <div className="header-main">
+                            <h2>The <span className="outline">Technical</span> DNA of <span className="accent">Finepoint</span></h2>
+                            <p className="header-desc">
+                                We are more than builders; we are the technical architects of the Australian skyline,
+                                bringing disciplined precision to every high-stakes environment.
+                            </p>
+                        </div>
+                        <div className="header-decor">
+                            <div className="blueprint-line"></div>
+                            <div className="coordinate-marker">33.9473° S, 151.1927° E</div>
+                        </div>
+                    </div>
+                </header>
+
+                <div className="about-accordion">
                     {values.map((item, index) => (
                         <div
                             key={index}
@@ -116,55 +129,52 @@ const About = () => {
                         >
                             <div
                                 className="accordion-header"
-                                onClick={() => setActiveIndex(index)}
+                                onClick={() => setActiveIndex(activeIndex === index ? -1 : index)}
                             >
-                                <h2>{item.title}</h2>
-                                <div className="accordion-line"></div>
+                                <span className="item-number">0{index + 1}</span>
+                                <h3>{item.title}</h3>
+                                <div className="accordion-icon">
+                                    <span className="plus-line"></span>
+                                    <span className="plus-line"></span>
+                                </div>
                             </div>
+
                             <div className="accordion-body">
-                                <div className={`accordion-grid ${item.reversed ? 'reversed' : ''}`}>
-                                    <div className={`accordion-images-wrapper ${item.secondaryImage ? 'has-secondary' : ''}`}>
-                                        <div className="accordion-image main">
+                                <article className={`blog-post ${item.reversed ? 'reversed' : ''}`}>
+                                    <div className="post-media">
+                                        <div className="main-image">
                                             <img src={item.image} alt={item.title} />
+                                            {item.secondaryImage && (
+                                                <div className="floating-image desktop-only">
+                                                    <img src={item.secondaryImage} alt={`${item.title} Detail`} />
+                                                </div>
+                                            )}
                                         </div>
-                                        {item.secondaryImage && (
-                                            <div className="accordion-image secondary">
-                                                <img src={item.secondaryImage} alt={`${item.title} Insight`} />
-                                            </div>
-                                        )}
                                     </div>
-                                    <div className="accordion-content">
-                                        <div className="text-wrapper">
-                                            {item.tagline && <span className="tagline">{item.tagline}</span>}
-                                            <h3>{item.heading}</h3>
-                                            <div className="description">{item.description}</div>
+
+                                    <div className="post-content">
+                                        <div className="content-inner">
+                                            <h4 className="post-heading">{item.heading}</h4>
+                                            <div className="post-description">
+                                                {item.description}
+                                            </div>
 
                                             {item.points && (
-                                                <ul className="mission-points">
+                                                <div className="post-features">
                                                     {item.points.map((point, pIndex) => (
-                                                        <li key={pIndex}>
-                                                            <span className="checkmark">
-                                                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
-                                                                    <polyline points="20 6 9 17 4 12"></polyline>
-                                                                </svg>
-                                                            </span>
-                                                            <div className="point-content">
+                                                        <div key={pIndex} className="feature-item">
+                                                            <span className="feature-marker"></span>
+                                                            <div className="feature-text">
                                                                 <strong>{point.title}</strong>
                                                                 <p>{point.desc}</p>
                                                             </div>
-                                                        </li>
+                                                        </div>
                                                     ))}
-                                                </ul>
-                                            )}
-
-                                            {!item.points && (
-                                                <button className="read-more-btn">
-                                                    <span className="arrow">↗</span> READ MORE
-                                                </button>
+                                                </div>
                                             )}
                                         </div>
                                     </div>
-                                </div>
+                                </article>
                             </div>
                         </div>
                     ))}

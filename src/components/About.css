@@ -1,420 +1,383 @@
 .about-section {
-    overflow: hidden;
-    background-image: none !important;
     background-color: var(--bg-dark);
-    /* Use theme variable */
+    padding: var(--spacing-xl) 0;
 }
 
-
-
-.accordion-container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-
-.accordion-item {
+/* Creative Header Styling */
+.creative-about-header {
+    margin-bottom: var(--spacing-xl);
+    padding-bottom: 2rem;
+    position: relative;
     border-bottom: 1px solid var(--border-color);
-    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.accordion-item:last-child {
-    border-bottom: none;
-}
-
-.accordion-header {
-    padding: 2.5rem 0;
-    cursor: pointer;
-    position: relative;
-    transition: var(--transition-smooth);
-}
-
-.accordion-header h2 {
-    font-size: clamp(3rem, 10vw, 7rem);
-    font-weight: 800;
-    color: var(--text-primary);
-    transition: var(--transition-smooth);
-    margin: 0;
-    line-height: 1;
-    text-transform: capitalize;
-}
-
-.accordion-header:hover h2 {
-    transform: translateX(20px);
-}
-
-.accordion-item.active .accordion-header h2 {
-    color: var(--primary);
-    /* Orange when opened */
-}
-
-.accordion-line {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background: var(--border-color);
-    transform-origin: left;
-    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.accordion-item.active .accordion-line {
-    background: var(--primary);
-    /* Warm accent line like in image */
-    height: 2px;
-}
-
-/* Body Logic */
-.accordion-body {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.accordion-item.active .accordion-body {
-    max-height: 3000px;
-    /* Large enough to fit content */
-}
-
-.accordion-grid {
+.header-layout {
     display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    gap: 5rem;
-    padding: 4rem 0 6rem;
-    align-items: center;
+    grid-template-columns: 200px 1fr 200px;
+    gap: 3rem;
+    align-items: flex-end;
 }
 
-.accordion-grid.reversed {
-    grid-template-columns: 1fr 1.2fr;
-}
-
-.accordion-grid.reversed .accordion-images-wrapper {
-    order: 2;
-}
-
-.accordion-grid.reversed .accordion-content {
-    order: 1;
-}
-
-.accordion-grid.reversed .accordion-image.secondary {
-    right: auto;
-    left: -20px;
-}
-
-.accordion-grid.reversed .mission-points li:hover {
-    transform: translateX(-10px);
-}
-
-/* Images Wrapper for Collage Effect */
-.accordion-images-wrapper {
-    position: relative;
-    width: 100%;
-    max-width: 500px;
-    /* Constrain width to ensure centering is visible and doesn't look overwhelming */
-    justify-self: center;
-    /* Center the entire wrapper in the grid column */
-    aspect-ratio: 16 / 12;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transform: translateY(-30px);
-}
-
-.accordion-image.main {
-    width: 85%;
-    height: 90%;
-    margin: 0 auto;
-    /* Added for extra centering insurance */
-    overflow: hidden;
-    border-radius: 24px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.accordion-images-wrapper:not(.has-secondary) .accordion-image.main {
-    width: 100%;
-    height: 100%;
-    border-radius: 16px;
-}
-
-.accordion-image.secondary {
-    position: absolute;
-    bottom: -20px;
-    right: -10px;
-    width: 55%;
-    height: 60%;
-    overflow: hidden;
-    border-radius: 24px;
-    border: 10px solid var(--bg-dark);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
-    z-index: 2;
-    transform: translateY(0);
-    transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s ease;
-}
-
-.accordion-item.active .accordion-image.secondary {
-    animation: float-detail 4s ease-in-out infinite alternate;
-}
-
-@keyframes float-detail {
-    0% {
-        transform: translateY(-10px);
-    }
-
-    100% {
-        transform: translateY(-30px);
-    }
-}
-
-/* Add a subtle extra hover effect for the secondary image */
-.accordion-image.secondary:hover {
-    animation-play-state: paused;
-    transform: translateY(-35px) scale(1.02);
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
-    transition: all 0.4s ease;
-}
-
-.accordion-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transform: scale(1.1);
-    transition: transform 1.2s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.accordion-item.active .accordion-image img {
-    transform: scale(1);
-}
-
-/* Content */
-.accordion-content {
+.header-tag {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    gap: 0.5rem;
 }
 
-.text-wrapper {
-    max-width: 550px;
-    /* Increased for better paragraph flow */
-}
-
-.tagline {
-    display: inline-block;
+.header-tag .index {
+    font-family: var(--font-heading);
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1;
     color: var(--primary);
-    font-size: 0.95rem;
+    opacity: 0.2;
+}
+
+.header-tag .divider {
+    width: 40px;
+    height: 4px;
+    background: var(--primary);
+}
+
+.header-tag .label {
     font-weight: 700;
+    letter-spacing: 0.2rem;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.header-main h2 {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    line-height: 1;
     margin-bottom: 1.5rem;
+    letter-spacing: -2px;
 }
 
-.text-wrapper h3 {
-    font-size: 3.5rem;
-    font-weight: 600;
-    margin-bottom: 2rem;
-    line-height: 1.2;
-    color: var(--text-primary);
-    letter-spacing: -1px;
+.header-main .outline {
+    -webkit-text-stroke: 1px var(--text-primary);
+    color: transparent;
 }
 
-.description {
-    font-size: 1.15rem;
-    line-height: 1.6;
+.header-main .header-desc {
+    font-size: 1.2rem;
     color: var(--text-secondary);
-    margin-bottom: 3rem;
-    opacity: 0.9;
+    max-width: 600px;
+    line-height: 1.6;
 }
 
-.description p {
-    margin-bottom: 1.2rem;
+.header-decor {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1rem;
+    padding-bottom: 1rem;
 }
 
-.description p:last-child {
-    margin-bottom: 0;
+.blueprint-line {
+    width: 60px;
+    height: 1px;
+    background: var(--primary);
+    position: relative;
 }
 
-/* Mission Points List */
-.mission-points {
-    list-style: none;
-    padding: 0;
+.blueprint-line::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -3px;
+    width: 8px;
+    height: 8px;
+    border: 1px solid var(--primary);
+    transform: rotate(45deg);
+}
+
+.coordinate-marker {
+    font-family: 'Courier New', monospace;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+/* Accordion Wrapper */
+.about-accordion {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
 }
 
-.mission-points li {
-    display: flex;
-    align-items: flex-start;
-    gap: 1.2rem;
-    transition: all 0.3s ease;
+.accordion-item {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: var(--transition-smooth);
 }
 
-.point-content {
-    display: flex;
-    flex-direction: column;
-    gap: 0.3rem;
+.accordion-item.active {
+    border-color: var(--primary);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-.point-content strong {
-    font-size: 1.2rem;
-    font-weight: 600;
+.accordion-header {
+    padding: 2rem 2.5rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 2rem;
+    transition: var(--transition-smooth);
+}
+
+.accordion-header:hover {
+    background: rgba(255, 107, 53, 0.03);
+}
+
+.item-number {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+    opacity: 0.3;
+    transition: var(--transition-smooth);
+}
+
+.accordion-item.active .item-number {
+    opacity: 1;
+}
+
+.accordion-header h3 {
+    font-size: 1.8rem;
     color: var(--text-primary);
-    line-height: 1.3;
-}
-
-.point-content p {
-    font-size: 1rem;
-    color: var(--text-secondary);
-    line-height: 1.5;
     margin: 0;
+    flex: 1;
 }
 
-.mission-points li:hover {
-    transform: translateX(10px);
-}
-
-.checkmark {
+.accordion-icon {
+    position: relative;
+    width: 20px;
+    height: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #4CAF50;
-    /* Vibrant Green */
-    flex-shrink: 0;
-    margin-top: 2px;
-    filter: drop-shadow(0 0 5px rgba(76, 175, 80, 0.3));
 }
 
-.read-more-btn {
+.plus-line {
+    position: absolute;
+    background: var(--primary);
+    transition: var(--transition-smooth);
+}
+
+.plus-line:first-child {
+    width: 100%;
+    height: 2px;
+}
+
+.plus-line:last-child {
+    width: 2px;
+    height: 100%;
+}
+
+.accordion-item.active .plus-line:last-child {
+    transform: rotate(90deg);
+    opacity: 0;
+}
+
+/* Accordion Body */
+.accordion-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+}
+
+.accordion-item.active .accordion-body {
+    max-height: 2000px;
+    opacity: 1;
+    padding-bottom: 3rem;
+}
+
+/* Blog Layout Inside Accordion */
+.blog-post {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    padding: 0 3rem 2rem;
+    align-items: flex-start;
+}
+
+.blog-post.reversed .post-media {
+    order: 2;
+}
+
+.blog-post.reversed .post-content {
+    order: 1;
+}
+
+/* Media Styling */
+.post-media {
+    position: relative;
+}
+
+.main-image {
+    position: relative;
+    border-radius: 15px;
+    overflow: visible;
+}
+
+.main-image img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 15px;
+    display: block;
+}
+
+.floating-image {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    width: 180px;
+    height: 220px;
+    border-radius: 12px;
+    border: 6px solid var(--bg-card);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    z-index: 2;
+    overflow: hidden;
+}
+
+.reversed .floating-image {
+    right: auto;
+    left: -20px;
+}
+
+.floating-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Content Styling */
+.post-content {
     display: flex;
-    align-items: center;
-    gap: 1rem;
-    background: transparent;
-    border: 1px solid var(--text-primary);
-    padding: 1rem 2.5rem;
+    flex-direction: column;
+}
+
+.post-heading {
+    font-size: 2.2rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
     color: var(--text-primary);
-    font-weight: 700;
+}
+
+.post-description {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.post-description p {
+    margin-bottom: 1rem;
+}
+
+/* Features List */
+.post-features {
+    display: grid;
+    gap: 1.2rem;
+}
+
+.feature-item {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.feature-marker {
+    width: 10px;
+    height: 10px;
+    background: var(--primary);
+    border-radius: 2px;
+    margin-top: 6px;
+    flex-shrink: 0;
+}
+
+.feature-text strong {
+    display: block;
+    color: var(--text-primary);
+    font-size: 1rem;
+    margin-bottom: 0.1rem;
+}
+
+.feature-text p {
+    color: var(--text-muted);
     font-size: 0.9rem;
-    letter-spacing: 1px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    width: fit-content;
+    line-height: 1.4;
 }
 
-.read-more-btn .arrow {
-    color: var(--primary);
-    font-size: 1.2rem;
-    transition: transform 0.3s ease;
-}
-
-.read-more-btn:hover {
-    background: var(--text-primary);
-    color: var(--bg-dark);
-}
-
-.read-more-btn:hover .arrow {
-    transform: translate(5px, -5px);
-}
-
-/* Theme Overrides */
+/* Themes */
 .light-theme .about-section {
     background-color: #ffffff;
 }
 
-.light-theme .accordion-header h2,
-.light-theme .text-wrapper h3 {
-    color: #1a1a1a;
-}
-
-/* Specific override to keep active state orange in light theme */
-.light-theme .accordion-item.active .accordion-header h2 {
-    color: var(--primary);
-}
-
-.light-theme .text-wrapper p,
-.light-theme .description,
-.light-theme .point-content p {
-    color: #444;
-}
-
-.light-theme .point-content strong {
-    color: #1a1a1a;
-}
-
 .light-theme .accordion-item {
-    border-color: rgba(0, 0, 0, 0.08);
+    background: #f8f9fa;
 }
 
-.light-theme .accordion-line {
-    background: rgba(0, 0, 0, 0.08);
+.light-theme .floating-image {
+    border-color: #f8f9fa;
 }
 
-.light-theme .mission-points li {
-    color: #333;
+.light-theme .header-main .outline {
+    -webkit-text-stroke: 1px #111;
 }
 
-.light-theme .accordion-image.secondary {
-    border-color: #ffffff;
-}
+/* Responsive Handling */
+@media (max-width: 1200px) {
+    .header-layout {
+        grid-template-columns: 1fr 1fr;
+    }
 
-/* Responsive */
-@media (max-width: 1024px) {
-    .accordion-grid {
-        gap: 3rem;
+    .header-decor {
+        display: none;
     }
 }
 
 @media (max-width: 900px) {
-    .accordion-grid {
+    .header-layout {
         grid-template-columns: 1fr;
-        padding: 2rem 0 4rem;
-        gap: 3rem;
+        gap: 1.5rem;
     }
 
-    .accordion-header h2 {
-        font-size: clamp(2.5rem, 8vw, 4rem);
+    .header-tag .index {
+        font-size: 3rem;
     }
 
-    .accordion-images-wrapper {
-        order: 1;
-        aspect-ratio: 16 / 11;
-        margin-bottom: 2rem;
-    }
-
-    .accordion-image.secondary {
-        bottom: -10px;
-        right: 0px;
-        border: 6px solid var(--bg-dark);
-    }
-
-    .accordion-content {
-        order: 2;
-    }
-
-    .text-wrapper h3 {
-        font-size: 2.5rem;
-    }
-
-    .mission-points li {
-        font-size: 1.1rem;
+    .blog-post {
+        padding: 0 1.5rem 1.5rem;
     }
 }
 
-@media (max-width: 480px) {
-    .about-section {
-        padding: 5rem 0;
+@media (max-width: 768px) {
+
+    .blog-post,
+    .blog-post.reversed {
+        grid-template-columns: 1fr;
     }
 
-    .accordion-header {
-        padding: 1.5rem 0;
+    .blog-post.reversed .post-media {
+        order: 1;
     }
 
-    .text-wrapper h3 {
-        font-size: 1.4rem;
+    .blog-post.reversed .post-content {
+        order: 2;
     }
 
-    .read-more-btn {
-        width: 100%;
-        justify-content: center;
+    .main-image img {
+        height: 300px;
+    }
+
+    .desktop-only {
+        display: none;
     }
 }
