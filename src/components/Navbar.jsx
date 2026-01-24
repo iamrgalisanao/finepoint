@@ -1,24 +1,65 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect, useRef } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import './Navbar.css';
 import logoImg from '../assets/logo.png';
 
 const Navbar = ({ onQuoteClick, theme, toggleTheme }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuActive, setIsMenuActive] = useState(false);
+  const [underlineStyle, setUnderlineStyle] = useState({ left: 0, width: 0, opacity: 0 });
+  const navLinksRef = useRef(null);
+  const location = useLocation();
+
+  const navLinks = [
+    { name: 'Home', path: '/#home', id: 'home' },
+    { name: 'Who We Are', path: '/#about', id: 'about' },
+    { name: 'What We Do', path: '/#capabilities', id: 'capabilities' },
+    { name: 'Case Studies', path: '/#portfolio', id: 'portfolio' },
+    { name: 'Blog & Insights', path: '/#blog', id: 'blog' },
+    { name: 'Contact Us', path: '/#contact', id: 'contact' },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 50);
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const updateUnderline = (target) => {
+    if (target) {
+      const { offsetLeft, offsetWidth } = target;
+      setUnderlineStyle({
+        left: offsetLeft,
+        width: offsetWidth,
+        opacity: 1
+      });
+    } else {
+      setUnderlineStyle(prev => ({ ...prev, opacity: 0 }));
+    }
+  };
+
+  const syncActiveUnderline = () => {
+    if (navLinksRef.current) {
+      const currentPath = location.pathname + location.hash;
+      const activeLinkEl = Array.from(navLinksRef.current.querySelectorAll('a')).find(
+        (a) => a.getAttribute('href') === currentPath || (currentPath === '/' && a.getAttribute('href') === '/#home')
+      );
+      if (activeLinkEl) {
+        updateUnderline(activeLinkEl);
+      } else {
+        setUnderlineStyle(prev => ({ ...prev, opacity: 0 }));
+      }
+    }
+  };
+
+  useEffect(() => {
+    // Small delay to ensure DOM is ready and layout is stable
+    const timer = setTimeout(syncActiveUnderline, 100);
+    return () => clearTimeout(timer);
+  }, [location]);
 
   const toggleMenu = () => {
     setIsMenuActive(!isMenuActive);
@@ -46,7 +87,6 @@ const Navbar = ({ onQuoteClick, theme, toggleTheme }) => {
             <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle Theme">
               {theme === 'dark' ? '☀️' : '🌙'}
             </button>
-            {/* Mobile Hamburger moved to top for better UI on small screens */}
             <div className={`hamburger-launcher mobile-only ${isMenuActive ? 'active' : ''}`} onClick={toggleMenu}>
               <div className="hamburger-icon">
                 <span className="bar"></span>
@@ -58,28 +98,31 @@ const Navbar = ({ onQuoteClick, theme, toggleTheme }) => {
         </div>
       </div>
 
-      {/* Bottom Navigation Section - Hidden or modified on mobile */}
+      {/* Bottom Navigation Section */}
       <div className="nav-bottom desktop-only">
         <div className="container nav-bottom-content">
-          <div className="nav-links-desktop">
-            <Link to="/#home">Home</Link>
-            <Link to="/#about">Who We Are</Link>
-            <Link to="/#capabilities">What We Do</Link>
-            <Link to="/#portfolio">Case Studies</Link>
-            <Link to="/#blog">Blog & Insights</Link>
-            <Link to="/#contact">Contact Us</Link>
+          <div className="nav-links-desktop" ref={navLinksRef} onMouseLeave={syncActiveUnderline}>
+            {navLinks.map((link) => (
+              <Link
+                key={link.id}
+                to={link.path}
+                onMouseEnter={(e) => updateUnderline(e.currentTarget)}
+              >
+                {link.name}
+              </Link>
+            ))}
+            <div className="nav-underline" style={underlineStyle}></div>
           </div>
         </div>
       </div>
 
-      {/* Unified Mobile Menu Drawer */}
+      {/* Mobile Menu Drawer */}
       <div className={`nav-links mobile-menu ${isMenuActive ? 'active' : ''}`}>
-        <Link to="/#home" onClick={() => setIsMenuActive(false)}>Home</Link>
-        <Link to="/#about" onClick={() => setIsMenuActive(false)}>Who We Are</Link>
-        <Link to="/#capabilities" onClick={() => setIsMenuActive(false)}>What We Do</Link>
-        <Link to="/#portfolio" onClick={() => setIsMenuActive(false)}>Case Studies</Link>
-        <Link to="/#blog" onClick={() => setIsMenuActive(false)}>Blog & Insights</Link>
-        <Link to="/#contact" onClick={() => setIsMenuActive(false)}>Contact Us</Link>
+        {navLinks.map((link) => (
+          <Link key={link.id} to={link.path} onClick={() => setIsMenuActive(false)}>
+            {link.name}
+          </Link>
+        ))}
         <button className="btn btn-primary nav-cta mobile-cta" onClick={() => { onQuoteClick(); setIsMenuActive(false); }}>
           Get a Quote
         </button>
