@@ -44,6 +44,15 @@ import ses3 from '../assets/img/Government/SES/003.jpeg';
 import ses4 from '../assets/img/Government/SES/004.jpeg';
 import ses5 from '../assets/img/Government/SES/005.jpeg';
 
+// oOh!media Project images
+import ooh1 from '../assets/img/Commercial/oohMedia/001.jpeg';
+import ooh2 from '../assets/img/Commercial/oohMedia/002.jpeg';
+import ooh3 from '../assets/img/Commercial/oohMedia/003.jpeg';
+import ooh4 from '../assets/img/Commercial/oohMedia/004.jpeg';
+import ooh5 from '../assets/img/Commercial/oohMedia/005.jpeg';
+import ooh6 from '../assets/img/Commercial/oohMedia/006.jpeg';
+
+
 
 
 
@@ -327,5 +336,36 @@ export const projects = [
         scopeConclusion: 'All works were carefully staged to ensure the continuous operation of mission-critical systems.',
         delivery: 'The project was delivered on time and within budget, with zero downtime recorded for the critical communications systems during the entire construction period.',
         images: [ses1, ses2, ses3, ses4, ses5]
+    },
+    {
+        id: 10,
+        slug: 'ooh-media-tech-hub',
+        title: 'oOh!media Sydney Headquarters',
+        category: 'Commercial',
+        location: 'North Sydney, NSW',
+        image: ooh1,
+        year: '2024',
+        value: '$15M',
+        duration: '12 Months',
+        client: 'oOh!media Ltd',
+        address: 'North Sydney, NSW',
+        description: 'A visually distinctive and highly functional feature staircase project for oOh!media’s modern office environment.',
+        overview: 'The oOh!media Sydney headquarters features a striking mesh feature staircase that acts as the architectural centrepiece of the shared workspace. Engaged by Activemetal, Finepoint Projects delivered a visually distinctive and highly functional stair solution that enhances connectivity, collaboration, and movement within a modern office environment.',
+        highlights: [
+            'Installation of a custom steel mesh feature staircase within a contemporary office fit-out',
+            'Integration of architectural mesh to balance transparency, safety, and visual impact',
+            'Enhancement of vertical connectivity between office levels',
+            'Creation of a focal design element that reinforces collaboration and interaction'
+        ],
+        highlightsConclusion: 'The feature staircase has become the structural and social heart of the workplace.',
+        scope: [
+            'Installation of the steel mesh feature stair',
+            'Installation of matching balustrades and handrails',
+            'Coordination with Activemetal to achieve architectural and design intent',
+            'Precision installation within an active commercial workplace'
+        ],
+        scopeConclusion: 'Careful planning ensured the architectural intent was perfectly translated into the final structural form.',
+        delivery: 'Delivered through close collaboration with specialist partners, the project successfully balanced architectural expression with functional performance, resulting in a future-focused workplace feature that supports connectivity, creativity, and seamless movement.',
+        images: [ooh1, ooh2, ooh3, ooh4, ooh5, ooh6]
     }
 ];
