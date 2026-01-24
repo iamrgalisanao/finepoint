@@ -5,13 +5,19 @@ import './Portfolio.css';
 const Portfolio = ({ projects }) => {
     const [filter, setFilter] = useState('All');
     const [loadingProject, setLoadingProject] = useState(null);
+    const [currentPage, setCurrentPage] = useState(1);
+    const itemsPerPage = 6;
 
     const handleProjectClick = (id) => {
         setLoadingProject(id);
-        // Simulate a temporary placeholder/loading state
         setTimeout(() => {
             setLoadingProject(null);
         }, 1500);
+    };
+
+    const handleFilterChange = (newFilter) => {
+        setFilter(newFilter);
+        setCurrentPage(1); // Reset to first page on filter change
     };
 
     const filteredProjects = filter === 'All'
@@ -19,6 +25,11 @@ const Portfolio = ({ projects }) => {
         : projects.filter(p => p.category === filter);
 
     const categories = ['All', ...new Set(projects.map(p => p.category))];
+
+    // Pagination Logic
+    const totalPages = Math.ceil(filteredProjects.length / itemsPerPage);
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const paginatedProjects = filteredProjects.slice(startIndex, startIndex + itemsPerPage);
 
     return (
         <section id="portfolio" className="section portfolio">
@@ -33,7 +44,7 @@ const Portfolio = ({ projects }) => {
                         <button
                             key={cat}
                             className={`filter-btn ${filter === cat ? 'active' : ''}`}
-                            onClick={() => setFilter(cat)}
+                            onClick={() => handleFilterChange(cat)}
                         >
                             {cat}
                         </button>
@@ -41,7 +52,7 @@ const Portfolio = ({ projects }) => {
                 </div>
 
                 <div className="portfolio-grid">
-                    {filteredProjects.map((project, index) => (
+                    {paginatedProjects.map((project, index) => (
                         <div
                             key={project.id || index}
                             className="portfolio-item animate-fade-in-up"
@@ -66,9 +77,6 @@ const Portfolio = ({ projects }) => {
                                                     to={`/portfolio/${project.slug}`}
                                                     className="btn-link"
                                                     onClick={(e) => {
-                                                        // Prevent double trigger if clicking the link specifically
-                                                        // but the link navigation will happen after the timeout if we wanted it to,
-                                                        // for now let's just show placeholder on click anywhere.
                                                         e.stopPropagation();
                                                     }}
                                                 >
@@ -82,6 +90,23 @@ const Portfolio = ({ projects }) => {
                         </div>
                     ))}
                 </div>
+
+                {totalPages > 1 && (
+                    <div className="pagination-container">
+                        {[...Array(totalPages)].map((_, i) => (
+                            <button
+                                key={i + 1}
+                                className={`pagination-btn ${currentPage === i + 1 ? 'active' : ''}`}
+                                onClick={() => {
+                                    setCurrentPage(i + 1);
+                                    document.getElementById('portfolio').scrollIntoView({ behavior: 'smooth' });
+                                }}
+                            >
+                                {i + 1}
+                            </button>
+                        ))}
+                    </div>
+                )}
             </div>
         </section>
     );
