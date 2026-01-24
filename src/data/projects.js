@@ -17,6 +17,14 @@ import nbn2 from '../assets/img/Commercial/NBN/Photo2.jpg';
 import nbn3 from '../assets/img/Commercial/NBN/Photo3.jpg';
 import nbn4 from '../assets/img/Commercial/NBN/Photo4.jpg';
 
+// Green Acre Splash Park images
+import greenAcre1 from '../assets/img/Government/GreenAcre/001.jpg';
+import greenAcre2 from '../assets/img/Government/GreenAcre/002.jpg';
+import greenAcre3 from '../assets/img/Government/GreenAcre/003.png';
+import greenAcre4 from '../assets/img/Government/GreenAcre/004.jpeg';
+import greenAcre5 from '../assets/img/Government/GreenAcre/005.jpg';
+
+
 export const projects = [
     {
         id: 1,
@@ -146,7 +154,7 @@ export const projects = [
         id: 5,
         slug: 'nbn-infrastructure-hub',
         title: 'NBN Network Hub & Infrastructure',
-        category: 'Government',
+        category: 'Commercial',
         location: 'Multiple Locations, NSW',
         image: nbn2,
         year: '2024',
@@ -172,5 +180,36 @@ export const projects = [
         scopeConclusion: 'All works were delivered within live network environments, requiring meticulous planning to avoid service interruptions.',
         delivery: 'Successfully handed over in late 2024, the infrastructure meets all federal compliance standards and has significantly boosted network capacity.',
         images: [nbn1, nbn2, nbn3, nbn4]
+    },
+    {
+        id: 6,
+        slug: 'green-acre-splash-park',
+        title: 'Green Acre Splash Park',
+        category: 'Government',
+        location: 'Greenacre, NSW',
+        image: greenAcre4,
+        year: '2023',
+        value: '$12M',
+        duration: '14 Months',
+        client: 'City of Canterbury-Bankstown',
+        address: 'Greenacre, NSW',
+        description: 'A vibrant community aquatic facility designed for accessibility, safety, and modern recreational value.',
+        overview: 'The Green Acre Splash Park project involved the technical delivery of a specialized regional water play facility. Our team managed the precise installation of hydraulic systems, non-slip surfacing, and custom-engineered water features while ensuring strict adherence to public safety and water conservation standards. The facility serves as a flagship community hub for the Greenacre area.',
+        highlights: [
+            'Precision hydraulic water feature installation',
+            'Advanced water filtration and treatment systems',
+            'Full disability (DDA) accessibility integration',
+            'Bespoke architectural shade structures'
+        ],
+        highlightsConclusion: 'The splash park has since become a major regional destination, providing a cost-free cooling and recreational asset for the community.',
+        scope: [
+            'Excavation and civil drainage works',
+            'Specialist aquatic hydraulic engineering',
+            'Durable anti-slip safety surfacing',
+            'Landscaping and public amenity construction'
+        ],
+        scopeConclusion: 'Careful management of live site constraints allowed the project to be completed with minimal impact on the surrounding parklands.',
+        delivery: 'Completed in late 2023, the facility was delivered with 100% compliance to safety standards and has seen record-breaking attendance since its opening.',
+        images: [greenAcre1, greenAcre2, greenAcre3, greenAcre4, greenAcre5]
     }
 ];
