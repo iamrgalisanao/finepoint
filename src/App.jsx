@@ -11,6 +11,7 @@ import QuoteModal from './components/QuoteModal';
 import ProjectDetails from './components/ProjectDetails';
 import Stats from './components/Stats';
 import About from './components/About';
+import Clients from './components/Clients';
 import { projects } from './data/projects';
 
 function App() {
@@ -74,6 +75,7 @@ function App() {
             <Hero onQuoteClick={openQuoteModal} />
             <About />
             <Stats />
+            <Clients />
             <Capabilities onQuoteClick={openQuoteModal} />
             <Portfolio projects={projects} />
             <Contact />
