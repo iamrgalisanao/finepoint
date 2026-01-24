@@ -32,8 +32,8 @@ const Navbar = ({ onQuoteClick, theme, toggleTheme }) => {
     if (target) {
       const { offsetLeft, offsetWidth } = target;
       setUnderlineStyle({
-        left: offsetLeft,
-        width: offsetWidth,
+        left: offsetLeft - 2,
+        width: offsetWidth + 4,
         opacity: 1
       });
     } else {

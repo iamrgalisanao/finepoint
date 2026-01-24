@@ -197,11 +197,12 @@
 .nav-underline {
     position: absolute;
     bottom: 0;
-    height: 3px;
+    height: 4px;
     background-color: var(--primary);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     pointer-events: none;
     border-radius: 2px;
+    box-shadow: 0 0 10px rgba(255, 107, 53, 0.3);
 }
 
 /* Mobile Specific */
