@@ -61,7 +61,7 @@ const Portfolio = ({ projects }) => {
         <section id="portfolio" className="section portfolio">
             <div className="container">
                 <div className="section-title">
-                    <h2>Our Portfolio</h2>
+                    <h2>Projects</h2>
                     <div className="underline"></div>
                 </div>
 

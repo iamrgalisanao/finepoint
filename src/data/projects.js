@@ -58,66 +58,8 @@ import ooh6 from '../assets/img/Commercial/oohMedia/006.jpeg';
 
 
 export const projects = [
-    {
-        id: 2,
-        slug: 'the-emerald-heights',
-        title: 'The Emerald Heights',
-        category: 'Residential',
-        location: 'Gold Coast, QLD',
-        image: resImg,
-        year: '2023',
-        duration: '18 Months',
-        client: 'Azure Developments',
-        address: 'Surfers Paradise, QLD',
-        description: 'A luxury boutique residential development redefining coastal living with premium finishes and architectural mastery.',
-        overview: 'Redefining the coastline, this project involved the complex construction of a high-rise tower on sandy terrain, requiring innovative piling and wind-resistant structural design.',
-        highlights: [
-            'Smart home automation integration',
-            'High-performance facade glazing',
-            'Automated subterranean parking',
-            'Rooftop leisure and infinity pool'
-        ],
-        highlightsConclusion: 'These residential features have set a new standard for luxury living in the region, blending high-tech convenience with unparalleled coastal aesthetics.',
-        scope: [
-            'Structural pile foundation engineering',
-            'Post-tensioned slab construction',
-            'Architectural facade installation',
-            'Interior luxury fit-out'
-        ],
-        scopeConclusion: 'The structural engineering ensures long-term durability against extreme coastal weather while maintaining the architectural elegance of the slim profile.',
-        delivery: 'Handover was finalized in late 2023 with 100% occupancy achieved at launch. The project has since won multiple awards for coastal architecture.',
-        images: [resImg, govImg, commImg]
-    },
-    {
-        id: 3,
-        slug: 'technexus-hq',
-        title: 'TechNexus HQ',
-        category: 'Commercial',
-        location: 'Melbourne, VIC',
-        image: commImg,
-        year: '2025',
-        duration: '32 Months',
-        client: 'Global Tech Corp',
-        address: 'Docklands, Melbourne',
-        description: 'A high-spec commercial development designed for innovation, featuring sustainable architecture and 5D BIM integration.',
-        overview: 'TechNexus HQ represents the future of commercial workspace, focusing on flexibility and technological integration within a carbon-neutral framework.',
-        highlights: [
-            'Net Zero carbon lifecycle operations',
-            'AI-integrated building management',
-            'Modular workspace configurations',
-            'Biophilic atrium and green walls'
-        ],
-        highlightsConclusion: 'By integrating sustainability with deep tech, this development establishes a blueprint for future-proofed commercial hubs globally.',
-        scope: [
-            'Exoskeleton structural engineering',
-            'Tier-4 data center construction',
-            'Integrated solar glass facade',
-            'Sustainable HVAC system design'
-        ],
-        scopeConclusion: 'The innovative exoskeleton removes the need for internal pillars, maximizing usable floor space while enhancing structural integrity.',
-        delivery: 'The project is currently tracking ahead of schedule for a early 2025 opening, setting a new benchmark for sustainable commercial developments in Australia.',
-        images: [commImg, resImg, govImg]
-    },
+
+
     {
         id: 4,
         slug: 'granville-c-tower',

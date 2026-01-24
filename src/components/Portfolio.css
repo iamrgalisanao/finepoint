@@ -29,8 +29,9 @@
 }
 
 .portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 2rem;
     max-width: 1400px;
     margin: 0 auto;
@@ -44,7 +45,20 @@
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
     background-color: var(--bg-card);
     border: 1px solid var(--border-color);
+    /* 3 columns = 33.333% minus gap adjustment */
+    /* Total width = 100%. Items = 3. Gaps = 2. Gap size = 2rem. */
+    /* Item width = (100% - (2 * 2rem)) / 3 */
+    flex: 0 0 calc((100% - 4rem) / 3);
+    max-width: calc((100% - 4rem) / 3);
     width: 100%;
+}
+
+@media (max-width: 1024px) {
+    .portfolio-item {
+        /* 2 columns on tablet/smaller laptops */
+        flex: 0 0 calc((100% - 2rem) / 2);
+        max-width: calc((100% - 2rem) / 2);
+    }
 }
 
 /* Pagination Animation Styles */
@@ -134,7 +148,13 @@
 
 @media (max-width: 600px) {
     .portfolio-grid {
-        grid-template-columns: 1fr;
+        justify-content: center;
+    }
+
+    .portfolio-item {
+        /* 1 column on mobile */
+        flex: 0 0 100%;
+        max-width: 100%;
     }
 }
 
