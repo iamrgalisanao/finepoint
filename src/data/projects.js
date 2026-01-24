@@ -302,30 +302,30 @@ export const projects = [
         slug: 'ses-building-refurbishment',
         title: 'SES Building Refurbishment',
         category: 'Government',
-        location: 'Sydney Metro, NSW',
+        location: 'Seven Hills, NSW',
         image: ses1,
-        year: '2023',
+        year: '2024',
         value: '$2.5M',
         duration: '8 Months',
         client: 'NSW State Emergency Service',
-        address: 'Sydney Metro Region, NSW',
+        address: 'Seven Hills, NSW',
         description: 'Comprehensive technical refurbishment of critical emergency service infrastructure to enhance operational readiness and facility longevity.',
-        overview: 'The SES Building Refurbishment project involved the deep modernization of critical emergency response facilities. Our objective was to upgrade building services, improve structural integrity, and modernize internal operational zones while the facility remained ready for rapid-response deployment. Works required strict adherence to government safety standards and precise coordination of specialist HVAC and communications infrastructure.',
+        overview: 'The refurbishment of the SES facility in Seven Hills focused on enhancing the technical and operational capacity of the building. This included a complete internal strip-out and rebuild to house specialized communications equipment and provide a high-performance environment for emergency response coordination.',
         highlights: [
-            'Operational zone modernization',
-            'Advanced backup power integration',
-            'Full building service upgrades',
-            'High-security access implementation'
+            'Installation of redundant power and UPS systems',
+            'High-spec communications rack and cabling',
+            'Precision cooling for technical equipment rooms',
+            'Acoustic treatment and secure partitions'
         ],
-        highlightsConclusion: 'The refurbished facility provides a modernized, future-proofed base for SES personnel to deliver critical services to the community.',
+        highlightsConclusion: 'The modernized facility now serves as a robust hub for critical communications and emergency response management.',
         scope: [
-            'Structural remediation and waterproofing',
-            'Specialist electrical and data fit-out',
-            'Acoustic and thermal insulation upgrades',
-            'Internal architectural reconfiguration'
+            'Civil foundation works for new equipment skids',
+            'Installation of structural steel support gantry',
+            'Specialized HVAC and fire suppression systems',
+            'High-security fit-out and access control'
         ],
-        scopeConclusion: 'Careful logistical planning ensured that emergency service capabilities were maintained without interruption throughout the build.',
-        delivery: 'Successfully completed in late 2023, the facility now meets all modern operational requirements and provides an enhanced working environment for SES teams.',
+        scopeConclusion: 'All works were carefully staged to ensure the continuous operation of mission-critical systems.',
+        delivery: 'The project was delivered on time and within budget, with zero downtime recorded for the critical communications systems during the entire construction period.',
         images: [ses1, ses2, ses3, ses4, ses5]
     }
 ];
