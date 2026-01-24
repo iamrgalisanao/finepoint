@@ -61,14 +61,6 @@ const Navbar = ({ onQuoteClick, theme, toggleTheme }) => {
       {/* Bottom Navigation Section - Hidden or modified on mobile */}
       <div className="nav-bottom desktop-only">
         <div className="container nav-bottom-content">
-          <div className={`hamburger-launcher ${isMenuActive ? 'active' : ''}`} onClick={toggleMenu}>
-            <div className="hamburger-icon">
-              <span className="bar"></span>
-              <span className="bar"></span>
-              <span className="bar"></span>
-            </div>
-          </div>
-
           <div className="nav-links-desktop">
             <Link to="/#home">Home</Link>
             <Link to="/#about">Who We Are</Link>

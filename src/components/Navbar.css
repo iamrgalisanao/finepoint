@@ -143,13 +143,16 @@
     height: 55px;
 }
 
-.hamburger-launcher {
+/* Hamburger Moved to mobile-only in JSX, removing desktop styles here */
+.hamburger-launcher.mobile-only {
     background: var(--primary);
     width: 55px;
+    height: 55px;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    border-radius: 4px;
 }
 
 .hamburger-icon .bar {
@@ -165,7 +168,8 @@
     display: flex;
     align-items: center;
     gap: 3rem;
-    padding-left: 2.5rem;
+    width: 100%;
+    justify-content: space-between;
 }
 
 .nav-links-desktop a {

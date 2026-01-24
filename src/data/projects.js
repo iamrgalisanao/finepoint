@@ -37,6 +37,14 @@ import roberts3 from '../assets/img/Government/RobertsPark/003.jpeg';
 import roberts4 from '../assets/img/Government/RobertsPark/004.jpeg';
 import roberts5 from '../assets/img/Government/RobertsPark/005.jpeg';
 
+// SES Building Refurbishment images
+import ses1 from '../assets/img/Government/SES/001.jpeg';
+import ses2 from '../assets/img/Government/SES/002.jpeg';
+import ses3 from '../assets/img/Government/SES/003.jpeg';
+import ses4 from '../assets/img/Government/SES/004.jpeg';
+import ses5 from '../assets/img/Government/SES/005.jpeg';
+
+
 
 
 
@@ -288,5 +296,36 @@ export const projects = [
         scopeConclusion: 'The project was delivered on time and within budget, ensuring the park remained operational throughout the construction phase.',
         delivery: 'Handover was completed in mid-2024, and the facility is now fully operational and serving as a central hub for local sporting activities.',
         images: [roberts1, roberts2, roberts3, roberts4, roberts5]
+    },
+    {
+        id: 9,
+        slug: 'ses-building-refurbishment',
+        title: 'SES Building Refurbishment',
+        category: 'Government',
+        location: 'Sydney Metro, NSW',
+        image: ses1,
+        year: '2023',
+        value: '$2.5M',
+        duration: '8 Months',
+        client: 'NSW State Emergency Service',
+        address: 'Sydney Metro Region, NSW',
+        description: 'Comprehensive technical refurbishment of critical emergency service infrastructure to enhance operational readiness and facility longevity.',
+        overview: 'The SES Building Refurbishment project involved the deep modernization of critical emergency response facilities. Our objective was to upgrade building services, improve structural integrity, and modernize internal operational zones while the facility remained ready for rapid-response deployment. Works required strict adherence to government safety standards and precise coordination of specialist HVAC and communications infrastructure.',
+        highlights: [
+            'Operational zone modernization',
+            'Advanced backup power integration',
+            'Full building service upgrades',
+            'High-security access implementation'
+        ],
+        highlightsConclusion: 'The refurbished facility provides a modernized, future-proofed base for SES personnel to deliver critical services to the community.',
+        scope: [
+            'Structural remediation and waterproofing',
+            'Specialist electrical and data fit-out',
+            'Acoustic and thermal insulation upgrades',
+            'Internal architectural reconfiguration'
+        ],
+        scopeConclusion: 'Careful logistical planning ensured that emergency service capabilities were maintained without interruption throughout the build.',
+        delivery: 'Successfully completed in late 2023, the facility now meets all modern operational requirements and provides an enhanced working environment for SES teams.',
+        images: [ses1, ses2, ses3, ses4, ses5]
     }
 ];
