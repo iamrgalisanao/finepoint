@@ -59,36 +59,6 @@ import ooh6 from '../assets/img/Commercial/oohMedia/006.jpeg';
 
 export const projects = [
     {
-        id: 1,
-        slug: 'sydney-metro-extension',
-        title: 'Sydney Metro Extension',
-        category: 'Government',
-        location: 'Sydney, NSW',
-        image: govImg,
-        year: '2024',
-        duration: '24 Months',
-        client: 'NSW Government',
-        address: 'Central Business District, Sydney',
-        description: 'A landmark infrastructure project enhancing urban connectivity through technical excellence and precision engineering.',
-        overview: 'The primary objective of the redevelopment was to transform the arena from an open pavilion into a state-of-the-art, fully covered multi-purpose venue. This upgrade was designed not only to meet current building codes but also to significantly enhance the experience for athletes, spectators, and event organisers.',
-        highlights: [
-            'Installation of new lighting and sound systems',
-            'Integration of large-format video screens',
-            'Upgraded seating and spectator amenities',
-            'Improved structural performance and code compliance'
-        ],
-        highlightsConclusion: 'These improvements established a new benchmark for Australian sports facilities, enabling the venue to host both tennis and netball events at an elite level.',
-        scope: [
-            'Installation of structural laminated glass balustrades',
-            'Engineering of heavy steel stanchion support system',
-            'Perimeter and seating-area safety upgrades',
-            'Compliance with crowd-load performance standards'
-        ],
-        scopeConclusion: 'The balustrades were engineered to maintain safety across all 10,000 seats—even during peak occupancy for major tournaments and events.',
-        delivery: 'Completed ahead of schedule for the 2024 Metro Launch. The upgraded infrastructure now meets modern codes and delivers a significantly enhanced commuter experience.',
-        images: [govImg, commImg, resImg]
-    },
-    {
         id: 2,
         slug: 'the-emerald-heights',
         title: 'The Emerald Heights',
