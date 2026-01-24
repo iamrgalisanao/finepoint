@@ -24,6 +24,13 @@ import greenAcre3 from '../assets/img/Government/GreenAcre/003.png';
 import greenAcre4 from '../assets/img/Government/GreenAcre/004.jpeg';
 import greenAcre5 from '../assets/img/Government/GreenAcre/005.jpg';
 
+// Hurlstone Park Amenities images
+import hurlstone1 from '../assets/img/Government/HurlstonePark/001.jpeg';
+import hurlstone2 from '../assets/img/Government/HurlstonePark/002.jpeg';
+import hurlstone3 from '../assets/img/Government/HurlstonePark/003.jpeg';
+import hurlstone4 from '../assets/img/Government/HurlstonePark/004.jpeg';
+
+
 
 export const projects = [
     {
@@ -211,5 +218,36 @@ export const projects = [
         scopeConclusion: 'Careful management of live site constraints allowed the project to be completed with minimal impact on the surrounding parklands.',
         delivery: 'Completed in late 2023, the facility was delivered with 100% compliance to safety standards and has seen record-breaking attendance since its opening.',
         images: [greenAcre1, greenAcre2, greenAcre3, greenAcre4, greenAcre5]
+    },
+    {
+        id: 7,
+        slug: 'hurlstone-park-amenities',
+        title: 'Hurlstone Park Amenities',
+        category: 'Government',
+        location: 'Hurlstone Park, NSW',
+        image: hurlstone1,
+        year: '2024',
+        value: '$4.5M',
+        duration: '10 Months',
+        client: 'City of Canterbury-Bankstown',
+        address: 'Hurlstone Park, NSW',
+        description: 'Modern public amenity architecture designed to service regional parklands with durability and architectural merit.',
+        overview: 'The Hurlstone Park Amenities project involved the construction of a contemporary, high-durability public facility designed to meet the growing needs of the local community. The build focused on integrating vandal-resistant materials with architectural aesthetics, featuring curved masonry and natural ventilation systems suitable for a high-traffic public park environment.',
+        highlights: [
+            'Architectural curved masonry construction',
+            'Sustainable natural ventilation integration',
+            'Heavy-duty vandal-resistant fit-outs',
+            'Integrated landscape transition zones'
+        ],
+        highlightsConclusion: 'The project has sets a new benchmark for public utility architecture within the Canterbury-Bankstown precinct.',
+        scope: [
+            'Complex masonry and concrete works',
+            'Architectural metalwork and roofing',
+            'Specialist plumbing and drainage systems',
+            'Hard and soft landscaping'
+        ],
+        scopeConclusion: 'The project team successfully managed construction activities while maintaining full public access to the surrounding recreational areas.',
+        delivery: 'Handed over in early 2024, the facility has received positive feedback for its functional design and seamless blend with the parkland environment.',
+        images: [hurlstone1, hurlstone2, hurlstone3, hurlstone4]
     }
 ];
