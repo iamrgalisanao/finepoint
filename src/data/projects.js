@@ -241,31 +241,31 @@ export const projects = [
     {
         id: 7,
         slug: 'hurlstone-park-amenities',
-        title: 'Hurlstone Park Amenities',
+        title: 'Hurlstone Memorial Reserve Community Centre',
         category: 'Government',
         location: 'Hurlstone Park, NSW',
         image: hurlstone1,
         year: '2024',
         duration: '10 Months',
-        client: 'City of Canterbury-Bankstown',
+        client: 'City of Canterbury Bankstown',
         address: 'Hurlstone Park, NSW',
-        description: 'Modern public amenity architecture designed to service regional parklands with durability and architectural merit.',
-        overview: 'The Hurlstone Park Amenities project involved the construction of a contemporary, high-durability public facility designed to meet the growing needs of the local community. The build focused on integrating vandal-resistant materials with architectural aesthetics, featuring curved masonry and natural ventilation systems suitable for a high-traffic public park environment.',
+        description: 'A new multipurpose civic pavilion providing flexible indoor and outdoor spaces for community engagement at Hurlstone Memorial Reserve.',
+        overview: 'The Hurlstone Memorial Reserve Community Centre is a new multipurpose civic pavilion delivered within Hurlstone Park to provide flexible indoor and outdoor spaces for community activities. Designed to respond to local needs and integrated thoughtfully into the park setting, the building fosters connectivity, openness, and community engagement while enhancing the surrounding reserve.',
         highlights: [
-            'Architectural curved masonry construction',
-            'Sustainable natural ventilation integration',
-            'Heavy-duty vandal-resistant fit-outs',
-            'Integrated landscape transition zones'
+            'Delivery of a contemporary Y-shaped community pavilion with adaptable indoor and outdoor spaces',
+            'Integration of expansive glazed openings to promote transparency and cross-ventilation',
+            'Sculptural perforated metal and architectural roof elements to create a dynamic presence',
+            'Enhanced accessibility and functional amenities including kitchenette, toilets, and covered breakout areas'
         ],
-        highlightsConclusion: 'The project has sets a new benchmark for public utility architecture within the Canterbury-Bankstown precinct.',
+        highlightsConclusion: 'The architectural design balances aesthetic impact with community utility, serving as a beacon of local engagement.',
         scope: [
-            'Complex masonry and concrete works',
-            'Architectural metalwork and roofing',
-            'Specialist plumbing and drainage systems',
-            'Hard and soft landscaping'
+            'Construction of a multipurpose community room and covered outdoor space',
+            'Installation of passive design features for cross ventilation and natural light',
+            'Delivery of robust materials and passive environmental design strategies',
+            'Coordination of landscape interface works and building integration with surrounding parkland'
         ],
         scopeConclusion: 'The project team successfully managed construction activities while maintaining full public access to the surrounding recreational areas.',
-        delivery: 'Handed over in early 2024, the facility has received positive feedback for its functional design and seamless blend with the parkland environment.',
+        delivery: 'Delivered in collaboration with the City of Canterbury Bankstown and project partners, the centre was completed with careful attention to community needs, environmental responsiveness, and architectural quality, creating a vibrant, accessible hub that supports social interaction and enriches park amenities.',
         images: [hurlstone1, hurlstone2, hurlstone3, hurlstone4]
     },
     {
