@@ -273,29 +273,27 @@ export const projects = [
         slug: 'ses-building-refurbishment',
         title: 'SES Building Refurbishment',
         category: 'Government',
-        location: 'Seven Hills, NSW',
-        image: ses1,
-        year: '2024',
+        location: 'Hebersham, NSW',
+        image: ses2,
+        year: '2023',
         duration: '8 Months',
-        client: 'NSW State Emergency Service',
-        address: 'Seven Hills, NSW',
-        description: 'Comprehensive technical refurbishment of critical emergency service infrastructure to enhance operational readiness and facility longevity.',
-        overview: 'The refurbishment of the SES facility in Seven Hills focused on enhancing the technical and operational capacity of the building. This included a complete internal strip-out and rebuild to house specialized communications equipment and provide a high-performance environment for emergency response coordination.',
+        client: 'Blacktown Council',
+        address: 'Hebersham, NSW',
+        description: 'End-to-end management and construction to upgrade a critical emergency services facility into a highly functional operational hub.',
+        overview: 'The SES Building Refurbishment involved the end-to-end management of design coordination and construction works to upgrade an existing emergency services facility into a durable, compliant, and highly functional operational hub. The project focused on enhancing building performance, safety, accessibility, and operational efficiency while delivering robust internal amenities and external architectural upgrades suitable for high-use, critical-response environments.',
         highlights: [
-            'Installation of redundant power and UPS systems',
-            'High-spec communications rack and cabling',
-            'Precision cooling for technical equipment rooms',
-            'Acoustic treatment and secure partitions'
+            'Refurbished internal amenities with modern, compliant toilet and shower facilities',
+            'Delivered a commercial-grade kitchen to support operational and staff requirements'
         ],
-        highlightsConclusion: 'The modernized facility now serves as a robust hub for critical communications and emergency response management.',
+        highlightsConclusion: 'These internal upgrades significantly improved the operational environment and staff welfare within the facility.',
         scope: [
-            'Civil foundation works for new equipment skids',
-            'Installation of structural steel support gantry',
-            'Specialized HVAC and fire suppression systems',
-            'High-security fit-out and access control'
+            'Supply and installation of perimeter PFC, awnings, aluminium capping, boundary roof, balustrades, and balcony shrouds',
+            'Refurbishment of male, female, and accessible amenities to meet NCC and accessibility standards',
+            'Design and construction of a commercial kitchen with stainless steel fittings and ventilation systems',
+            'Coordination of building services, compliance upgrades, and trade interfaces through to completion'
         ],
-        scopeConclusion: 'All works were carefully staged to ensure the continuous operation of mission-critical systems.',
-        delivery: 'The project was delivered on time and within budget, with zero downtime recorded for the critical communications systems during the entire construction period.',
+        scopeConclusion: 'The integrated approach ensured all architectural and compliance requirements were met to the highest standards.',
+        delivery: 'The project was delivered through comprehensive management from design development through to construction completion, ensuring seamless coordination of trades, strict compliance with regulatory standards, and the successful delivery of a resilient, functional facility that supports the operational demands of emergency services personnel.',
         images: [ses1, ses2, ses3, ses4, ses5]
     },
     {
