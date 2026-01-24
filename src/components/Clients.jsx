@@ -81,7 +81,7 @@ const Clients = () => {
     };
 
     return (
-        <section className="clients-section section">
+        <section id="clients" className="clients-section section">
             <div className="container">
                 <div className="clients-header reveal">
                     <span className="subtitle">Client Success</span>
@@ -120,19 +120,12 @@ const Clients = () => {
                                     className={`logo-nav-btn ${activeIndex === index ? 'active' : ''}`}
                                     onClick={() => handleClientClick(index)}
                                 >
+                                    <svg className="snake-border" viewBox="0 0 100 100" preserveAspectRatio="none">
+                                        <rect x="0" y="0" width="100" height="100" fill="none" vectorEffect="non-scaling-stroke" />
+                                    </svg>
                                     <span className="btn-text">{item.client}</span>
                                 </button>
                             ))}
-                        </div>
-                        {/* Progress Bar / Underline for Navigation */}
-                        <div className="nav-progress-track">
-                            <div
-                                className="nav-progress-bar"
-                                style={{
-                                    width: `${100 / testimonials.length}%`,
-                                    transform: `translateX(${activeIndex * 100}%)`
-                                }}
-                            ></div>
                         </div>
                     </div>
                 </div>
