@@ -3,6 +3,7 @@
     padding: 100px 0 40px;
     color: #FFFFFF;
     font-family: var(--font-main);
+    scroll-snap-align: start;
 }
 
 /* Brand Bar */

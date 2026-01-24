@@ -9,6 +9,7 @@ const Navbar = ({ onQuoteClick, theme, toggleTheme }) => {
   const [underlineStyle, setUnderlineStyle] = useState({ left: 0, width: 0, opacity: 0 });
   const navLinksRef = useRef(null);
   const location = useLocation();
+  const [activeId, setActiveId] = useState('home');
 
   const navLinks = [
     { name: 'Home', path: '/#home', id: 'home' },
@@ -28,6 +29,32 @@ const Navbar = ({ onQuoteClick, theme, toggleTheme }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Intersection Observer for scroll synchronization
+  useEffect(() => {
+    if (location.pathname !== '/') return;
+
+    const options = {
+      root: null,
+      rootMargin: '-40% 0px -40% 0px', // Trigger when section is in the middle of viewport
+      threshold: 0
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          setActiveId(entry.target.id);
+        }
+      });
+    }, options);
+
+    navLinks.forEach(link => {
+      const element = document.getElementById(link.id);
+      if (element) observer.observe(element);
+    });
+
+    return () => observer.disconnect();
+  }, [location.pathname]);
+
   const updateUnderline = (target) => {
     if (target) {
       const { offsetLeft, offsetWidth } = target;
@@ -43,10 +70,14 @@ const Navbar = ({ onQuoteClick, theme, toggleTheme }) => {
 
   const syncActiveUnderline = () => {
     if (navLinksRef.current) {
-      const currentPath = location.pathname + location.hash;
+      // Prioritize activeId from observer for active state
       const activeLinkEl = Array.from(navLinksRef.current.querySelectorAll('a')).find(
-        (a) => a.getAttribute('href') === currentPath || (currentPath === '/' && a.getAttribute('href') === '/#home')
+        (a) => {
+          const href = a.getAttribute('href');
+          return href === `/#${activeId}` || (activeId === 'home' && href === '/#home');
+        }
       );
+
       if (activeLinkEl) {
         updateUnderline(activeLinkEl);
       } else {
@@ -56,10 +87,10 @@ const Navbar = ({ onQuoteClick, theme, toggleTheme }) => {
   };
 
   useEffect(() => {
-    // Small delay to ensure DOM is ready and layout is stable
+    // Sync underline whenever activeId or location changes
     const timer = setTimeout(syncActiveUnderline, 100);
     return () => clearTimeout(timer);
-  }, [location]);
+  }, [activeId, location]);
 
   const toggleMenu = () => {
     setIsMenuActive(!isMenuActive);

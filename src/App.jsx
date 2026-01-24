@@ -74,10 +74,10 @@ function App() {
           <>
             <Hero onQuoteClick={openQuoteModal} />
             <About />
-            <Stats />
-            <Clients />
+            {/* <Stats /> */}
             <Capabilities onQuoteClick={openQuoteModal} />
             <Portfolio projects={projects} />
+            <Clients />
             <Contact />
           </>
         } />

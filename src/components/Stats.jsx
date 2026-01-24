@@ -10,7 +10,7 @@ const Stats = () => {
     ];
 
     return (
-        <section className="stats-section">
+        <section id="stats" className="stats-section">
             <div className="container">
                 <div className="stats-grid">
                     {stats.map((stat, index) => (
