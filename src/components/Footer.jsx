@@ -11,16 +11,18 @@ const Footer = () => {
             <div className="container">
                 {/* Brand Trust Bar */}
                 <div className="footer-brand-bar">
-                    <p className="trust-text">Trusted by over 6,000 Ambitious<br />Brands Across Australia</p>
+                    <p className="trust-text">Delivering technical excellence for Australia's <br />leading government and commercial partners.</p>
                     <div className="brand-logos">
-                        <span className="brand-logo">Beanca</span>
-                        <span className="brand-logo">Mosvolk</span>
-                        <span className="brand-logo">vagoda</span>
-                        <span className="brand-logo">Recolect</span>
+                        <span className="brand-logo">Canterbury Bankstown</span>
+                        <span className="brand-logo">Australian Government</span>
+                        <span className="brand-logo">Blacktown Council</span>
+                        <span className="brand-logo">Lendlease</span>
+                        <span className="brand-logo">Built.</span>
+                        <span className="brand-logo">Feenix</span>
+                        <span className="brand-logo">Westbourne</span>
+                        <span className="brand-logo">Nazero</span>
+                        <span className="brand-logo">Mackcivil</span>
                     </div>
-                    <button className="help-btn">
-                        <span className="arrow">→</span> Need Help?
-                    </button>
                 </div>
 
                 <div className="footer-main-content">
