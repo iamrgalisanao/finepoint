@@ -30,6 +30,14 @@ import hurlstone2 from '../assets/img/Government/HurlstonePark/002.jpeg';
 import hurlstone3 from '../assets/img/Government/HurlstonePark/003.jpeg';
 import hurlstone4 from '../assets/img/Government/HurlstonePark/004.jpeg';
 
+// Roberts Park Amenities Building images
+import roberts1 from '../assets/img/Government/RobertsPark/001.jpeg';
+import roberts2 from '../assets/img/Government/RobertsPark/002.jpeg';
+import roberts3 from '../assets/img/Government/RobertsPark/003.jpeg';
+import roberts4 from '../assets/img/Government/RobertsPark/004.jpeg';
+import roberts5 from '../assets/img/Government/RobertsPark/005.jpeg';
+
+
 
 
 export const projects = [
@@ -249,5 +257,36 @@ export const projects = [
         scopeConclusion: 'The project team successfully managed construction activities while maintaining full public access to the surrounding recreational areas.',
         delivery: 'Handed over in early 2024, the facility has received positive feedback for its functional design and seamless blend with the parkland environment.',
         images: [hurlstone1, hurlstone2, hurlstone3, hurlstone4]
+    },
+    {
+        id: 8,
+        slug: 'roberts-park-amenities',
+        title: 'Roberts Park Amenities Building',
+        category: 'Government',
+        location: 'Greenacre, NSW',
+        image: roberts1,
+        year: '2024',
+        value: '$3.8M',
+        duration: '12 Months',
+        client: 'City of Canterbury-Bankstown',
+        address: 'Roberts Park, Greenacre, NSW',
+        description: 'A modern sporting pavilion and community amenity facility designed to provide high-quality services for local athletes and park visitors.',
+        overview: 'The Roberts Park Amenities project involved the comprehensive delivery of a multi-purpose sporting pavilion. Our task was to engineer a structure that combined durability with modern architectural forms, providing changing rooms, referee facilities, and public amenities that meet current sporting code requirements. The building features complex brickwork detailing and integrated security systems to ensure longevity in a high-usage public area.',
+        highlights: [
+            'Multi-purpose sporting pavilion design',
+            'Contemporary brickwork and masonry detailing',
+            'Integrated high-security access controls',
+            'Sustainable energy and water management'
+        ],
+        highlightsConclusion: 'The new pavilion has significantly improved the quality of sporting infrastructure in Greenacre, supporting local clubs and community events.',
+        scope: [
+            'Full structural concrete and masonry build',
+            'Specialist sporting facility fit-out',
+            'External civil and landscaping works',
+            'Utility service upgrades and coordination'
+        ],
+        scopeConclusion: 'The project was delivered on time and within budget, ensuring the park remained operational throughout the construction phase.',
+        delivery: 'Handover was completed in mid-2024, and the facility is now fully operational and serving as a central hub for local sporting activities.',
+        images: [roberts1, roberts2, roberts3, roberts4, roberts5]
     }
 ];
