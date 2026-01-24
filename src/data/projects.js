@@ -52,14 +52,158 @@ import ooh4 from '../assets/img/Commercial/oohMedia/004.jpeg';
 import ooh5 from '../assets/img/Commercial/oohMedia/005.jpeg';
 import ooh6 from '../assets/img/Commercial/oohMedia/006.jpeg';
 
+// Sydney Olympic images
+import olympic1 from '../assets/img/Commercial/SydneyOlympic/001.jpg';
+import olympic2 from '../assets/img/Commercial/SydneyOlympic/002.jpg';
+import olympic3 from '../assets/img/Commercial/SydneyOlympic/003.png';
+import olympic4 from '../assets/img/Commercial/SydneyOlympic/004.jpg';
+import olympic5 from '../assets/img/Commercial/SydneyOlympic/005.jpg';
+import olympic6 from '../assets/img/Commercial/SydneyOlympic/006.jpg';
 
+// Nine News Sydney images
+import nine1 from '../assets/img/Commercial/Channel9/001.jpeg';
+import nine2 from '../assets/img/Commercial/Channel9/002.jpeg';
+import nine3 from '../assets/img/Commercial/Channel9/003.jpeg';
+import nine4 from '../assets/img/Commercial/Channel9/004.jpeg';
+import nine5 from '../assets/img/Commercial/Channel9/005.jpeg';
+import nine6 from '../assets/img/Commercial/Channel9/006.jpeg';
+import nine7 from '../assets/img/Commercial/Channel9/007.jpg';
 
+// 164 Substation images
+import substation1 from '../assets/img/Commercial/164Substation/001.jpg';
+import substation2 from '../assets/img/Commercial/164Substation/002.jpg';
+import substation3 from '../assets/img/Commercial/164Substation/003.jpg';
+import substation4 from '../assets/img/Commercial/164Substation/004.jpeg';
+import substation5 from '../assets/img/Commercial/164Substation/005.jpeg';
 
-
+// Allianz images
+import allianz1 from '../assets/img/Commercial/Allianz/001.jpeg';
+import allianz2 from '../assets/img/Commercial/Allianz/002.jpeg';
+import allianz3 from '../assets/img/Commercial/Allianz/003.jpeg';
+import allianz4 from '../assets/img/Commercial/Allianz/004.jpeg';
+import allianz5 from '../assets/img/Commercial/Allianz/005.jpeg';
 
 export const projects = [
-
-
+    {
+        id: 14,
+        slug: 'allianz',
+        title: 'Allianz',
+        category: 'Commercial',
+        location: 'Charlestown, NSW',
+        image: allianz1,
+        year: '2024-2025',
+        duration: 'N/A',
+        client: 'Asentis',
+        address: 'Charlestown, NSW',
+        description: 'This project focused on the Installation of key stair components within a commercial facility. The scope included structural steel stairs, timber handrails and top rails, and durable stair tiles. The works aimed to improve access between levels while ensuring a safe, functional, and visually cohesive finish.',
+        overview: 'This project focused on the Installation of key stair components within a commercial facility. The scope included structural steel stairs, timber handrails and top rails, and durable stair tiles. The works aimed to improve access between levels while ensuring a safe, functional, and visually cohesive finish.',
+        highlights: [
+            'Installation of structural steel stairs across designated levels',
+            'Supply and installation of timber handrails and top rails to complement interior finishes',
+            'Installation of high-durability stair tiles for improved slip resistance and long-term performance',
+            'Delivery of integrated stair components to enhance user accessibility and architectural cohesion'
+        ],
+        highlightsConclusion: 'The project delivered a high-quality staircase solution that seamlessly integrates with the commercial environment.',
+        scope: [
+            'Installation of timber handrails and top rails',
+            'Fabrication and installation of structural steel stairs',
+            'Installation of stair tiles, suited for high-traffic use',
+            'Coordination of works across multiple levels to ensure consistency, safety compliance, and alignment with design specifications'
+        ],
+        scopeConclusion: 'Meticulous planning and execution ensured the project met all architectural and safety standards.',
+        delivery: 'Delivered through a dedicated specialist team over a carefully managed timeline, the project achieved a high-quality installation of structural stair components through meticulous planning, precise execution, and close collaboration with the client. The works were delivered to meet architectural, functional, and safety requirements, ensuring consistency across all levels and full integration with the surrounding built environment.',
+        images: [allianz1, allianz2, allianz3, allianz4, allianz5]
+    },
+    {
+        id: 13,
+        slug: '164-substation',
+        title: '164 Substation',
+        category: 'Commercial',
+        location: 'Sydney CBD, NSW',
+        image: substation1,
+        year: '2020',
+        duration: '7 months',
+        client: 'Built',
+        address: '164 Kent Street, Sydney',
+        description: '164 Substation is a landmark heritage restoration project in Sydney’s CBD, originally constructed in 1909. Delivered in partnership with Built, Finepoint Projects played a key role in revitalizing the historic structure through a sensitive integration of contemporary architectural elements, preserving the building’s heritage significance while enabling modern functionality.',
+        overview: '164 Substation is a landmark heritage restoration project in Sydney’s CBD, originally constructed in 1909. Delivered in partnership with Built, Finepoint Projects played a key role in revitalizing the historic structure through a sensitive integration of contemporary architectural elements, preserving the building’s heritage significance while enabling modern functionality.',
+        highlights: [
+            'Adaptive reuse of a historic Sydney CBD substation into a modern commercial environment',
+            'Integration of contemporary architectural elements within original heritage fabric',
+            'Restoration and enhancement of original structural and architectural features',
+            'Introduction of high-end finishes to complement and contrast historic materials'
+        ],
+        highlightsConclusion: 'The restoration has successfully breathed new life into the historic Kent Street substation, transforming it into a premier commercial destination.',
+        scope: [
+            'Delivery of an architectural feature stair package',
+            'Restoration and preservation of heritage balustrades',
+            'Installation of architectural steel plate elements',
+            'Coordination of works to seamlessly integrate heritage and modern construction elements'
+        ],
+        scopeConclusion: 'The project required meticulous coordination to ensure the seamless blend of heritage materials with modern steel and glass components.',
+        delivery: 'Delivered through a collaborative partnership model, the project successfully balanced heritage conservation with modern construction techniques, achieving a refined transformation that preserves historical integrity while meeting contemporary commercial standards.',
+        images: [substation1, substation2, substation3, substation4, substation5]
+    },
+    {
+        id: 12,
+        slug: 'nine-news-sydney',
+        title: 'Nine News Sydney',
+        category: 'Commercial',
+        location: 'North Sydney, NSW',
+        image: nine1,
+        year: '2020',
+        duration: '1.5 months',
+        client: 'Activemetal',
+        address: 'North Sydney, NSW',
+        description: 'The Nine News Sydney headquarters project focused on delivering a visually striking and functional internal circulation feature that supports collaboration and connectivity across the workplace. Engaged by Activemetal, Finepoint Projects contributed to the delivery of a central architectural element that enhances both the aesthetic and spatial performance of the fit-out.',
+        overview: 'The Nine News Sydney headquarters project focused on delivering a visually striking and functional internal circulation feature that supports collaboration and connectivity across the workplace. Engaged by Activemetal, Finepoint Projects contributed to the delivery of a central architectural element that enhances both the aesthetic and spatial performance of the fit-out.',
+        highlights: [
+            'Integration of a multi-level interconnected staircase within a contemporary office environment',
+            'Enhancement of internal circulation to promote collaboration and connectivity',
+            'Introduction of architectural steel and glass elements to achieve a refined, modern aesthetic',
+            'Delivery of a feature stair that serves as a visual focal point when viewed across multiple levels'
+        ],
+        highlightsConclusion: 'The feature stair has become the architectural centerpiece of the Nine News headquarters, facilitating seamless movement and interaction.',
+        scope: [
+            'Installation of steel balustrade posts to the feature stair',
+            'Coordination with Activemetal to meet architectural and design intent',
+            'Integration of balustrade works across multiple stair levels',
+            'Precision installation to align with financial, aesthetic, and functional requirements'
+        ],
+        scopeConclusion: 'The project achieved a balance between cost efficiency and architectural excellence.',
+        delivery: 'Delivered through close collaboration with specialist partners, the project achieved a balance between cost efficiency and architectural excellence, resulting in a future-focused workspace feature that reflects innovation, teamwork, and design precision.',
+        images: [nine1, nine2, nine3, nine4, nine5, nine6, nine7]
+    },
+    {
+        id: 11,
+        slug: 'sydney-olympic-park',
+        title: 'Sydney Olympic Park Tennis Stadium',
+        category: 'Commercial',
+        location: 'Sydney Olympic Park, NSW',
+        image: olympic1,
+        year: '2019',
+        duration: '4 Months',
+        client: 'Activemetal',
+        address: 'Sydney Olympic Park, NSW',
+        description: 'Originally constructed to host tennis events for the 2000 Sydney Olympics, the Ken Rosewall Arena underwent a major redevelopment in 2020 to modernise the facility and expand its capabilities. Cox Architecture, partnering with builders AW Edwards, led the design and delivery of this ambitious upgrade.',
+        overview: 'The primary objective of the redevelopment was to transform the arena from an open pavilion into a state-of-the-art, fully covered multi-purpose venue. This upgrade was designed not only to meet current building codes but also to significantly enhance the experience for athletes, spectators, and event organisers.',
+        highlights: [
+            'Installation of new lighting and sound systems',
+            'Integration of large-format video screens',
+            'Upgraded seating and spectator amenities',
+            'Improved structural performance and code compliance'
+        ],
+        highlightsConclusion: 'These improvements established a new benchmark for Australian sports facilities, enabling the venue to host both tennis and netball events at an elite level.',
+        scope: [
+            'Installation of structural laminated glass balustrades',
+            'Engineering of heavy steel stanchion support system',
+            'Perimeter and seating-area safety upgrades',
+            'Compliance with crowd-load performance standards'
+        ],
+        scopeConclusion: 'The balustrades were engineered to maintain safety across all 10,000 seats—even during peak occupancy for major tournaments and events.',
+        delivery: 'Completed ahead of schedule for the 2020 ATP Cup. The upgraded 10,000-seat arena now meets modern codes and delivers a significantly enhanced spectator experience.',
+        images: [olympic1, olympic2, olympic3, olympic4, olympic5, olympic6]
+    },
     {
         id: 4,
         slug: 'granville-c-tower',

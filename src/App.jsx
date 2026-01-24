@@ -29,6 +29,15 @@ function App() {
   }, [theme]);
 
   useEffect(() => {
+    // Disable scroll snapping on subpages
+    if (pathname.includes('/portfolio/')) {
+      document.documentElement.classList.add('no-snap');
+    } else {
+      document.documentElement.classList.remove('no-snap');
+    }
+  }, [pathname]);
+
+  useEffect(() => {
     if (hash) {
       const element = document.getElementById(hash.replace('#', ''));
       if (element) {
@@ -74,7 +83,7 @@ function App() {
           <>
             <Hero onQuoteClick={openQuoteModal} />
             <About />
-            {/* <Stats /> */}
+            <Stats />
             <Capabilities onQuoteClick={openQuoteModal} />
             <Portfolio projects={projects} />
             <Clients />
