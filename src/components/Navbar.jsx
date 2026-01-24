@@ -15,7 +15,7 @@ const Navbar = ({ onQuoteClick, theme, toggleTheme }) => {
     { name: 'Home', path: '/#home', id: 'home' },
     { name: 'Who We Are', path: '/#about', id: 'about' },
     { name: 'What We Do', path: '/#capabilities', id: 'capabilities' },
-    { name: 'Case Studies', path: '/#portfolio', id: 'portfolio' },
+    { name: 'Our Portfolio', path: '/#portfolio', id: 'portfolio' },
     { name: 'Our Clients', path: '/#clients', id: 'clients' },
     { name: 'Contact Us', path: '/#contact', id: 'contact' },
   ];
