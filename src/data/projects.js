@@ -83,7 +83,89 @@ import allianz3 from '../assets/img/Commercial/Allianz/003.jpeg';
 import allianz4 from '../assets/img/Commercial/Allianz/004.jpeg';
 import allianz5 from '../assets/img/Commercial/Allianz/005.jpeg';
 
+// Greensquare Stage 2 images
+import greensquare1 from '../assets/img/Residential/GreenSquare/001.jpeg';
+import greensquare2 from '../assets/img/Residential/GreenSquare/002.jpeg';
+import greensquare3 from '../assets/img/Residential/GreenSquare/003.jpeg';
+import greensquare4 from '../assets/img/Residential/GreenSquare/004.jpeg';
+import greensquare5 from '../assets/img/Residential/GreenSquare/005.jpeg';
+import greensquare6 from '../assets/img/Residential/GreenSquare/006.jpeg';
+
+// Mona Vale images
+import monavale1 from '../assets/img/Residential/MonaVale/001.png';
+import monavale2 from '../assets/img/Residential/MonaVale/002.jpeg';
+import monavale3 from '../assets/img/Residential/MonaVale/003.jpeg';
+import monavale4 from '../assets/img/Residential/MonaVale/004.jpeg';
+import monavale5 from '../assets/img/Residential/MonaVale/005.jpeg';
+import monavale6 from '../assets/img/Residential/MonaVale/006.jpeg';
+
 export const projects = [
+    {
+        id: 16,
+        slug: 'mona-vale-maya',
+        title: 'Mona Vale - Maya',
+        category: 'Residential',
+        location: 'Mona Vale, NSW',
+        image: monavale2, // Using a jpeg for main image if possible, but the card has 001.png as main
+        year: '2024-2025',
+        duration: 'N/A',
+        client: 'Nazero One Pty Ltd',
+        address: '19 Bungan Street, Mona Vale',
+        description: 'This residential project involved the delivery of high-quality architectural metalwork, glazing, and external façade elements to a contemporary multi-residential development. Finepoint Projects delivered precision-fabricated steel, aluminium, and glass systems that integrate seamlessly with the building’s façade, entry areas, balconies, and landscaped communal spaces, enhancing both architectural expression and functional performance.',
+        overview: 'This residential project involved the delivery of high-quality architectural metalwork, glazing, and external façade elements to a contemporary multi-residential development. Finepoint Projects delivered precision-fabricated steel, aluminium, and glass systems that integrate seamlessly with the building’s façade, entry areas, balconies, and landscaped communal spaces, enhancing both architectural expression and functional performance.',
+        highlights: [
+            'Installation of architectural steel elements to define and articulate the building perimeter',
+            'Integration of structural awnings to enhance entry definition and weather protection',
+            'Enhancement of façade detailing through aluminium capping and shrouds',
+            'Delivery of refined balustrade and edge protection systems supporting safety and aesthetics'
+        ],
+        highlightsConclusion: 'The project achieved a cohesive integration of structural steel, aluminium, and glazing systems within a live residential environment.',
+        scope: [
+            'Supply and installation of perimeter PFC steel framing to the building façade',
+            'Supply and installation of structural steel awnings, including support framing',
+            'Supply and installation of aluminium capping to ground floor and façade interfaces',
+            'Supply and construction of boundary roof structures with integrated steelwork',
+            'Supply and installation of glass balustrades to balconies, ramps, and circulation areas',
+            'Supply and installation of aluminium shrouds to balconies and architectural elements'
+        ],
+        scopeConclusion: 'Durable, visually refined, and architecturally consistent outcome.',
+        delivery: 'Delivered through careful coordination and precise installation, the project achieved a cohesive integration of structural steel, aluminium, and glazing systems within a live residential environment, resulting in a durable, visually refined, and architecturally consistent outcome.',
+        images: [monavale1, monavale2, monavale3, monavale4, monavale5, monavale6]
+    },
+    {
+        id: 15,
+        slug: 'greensquare-stage-2',
+        title: 'Greensquare Stage 2',
+        category: 'Residential',
+        location: 'Zetland, NSW',
+        image: greensquare1,
+        year: '2024-2025',
+        duration: 'N/A',
+        client: 'Westbourne Constructions',
+        address: 'Zetland, NSW',
+        description: 'The Greensquare Stage 2 project focused on the delivery of architectural and functional metalwork elements across key zones of the development. The works enhanced the site’s design identity, accessibility, and user experience, particularly in communal, transit, and basement areas. Finepoint Projects was engaged to supply and install feature components that combined both visual impact and durability, tailored for high-traffic, high-use applications.',
+        overview: 'The Greensquare Stage 2 project focused on the delivery of architectural and functional metalwork elements across key zones of the development. The works enhanced the site’s design identity, accessibility, and user experience, particularly in communal, transit, and basement areas. Finepoint Projects was engaged to supply and install feature components that combined both visual impact and durability, tailored for high-traffic, high-use applications.',
+        highlights: [
+            'Installation of architectural aluminium fins to define building features and create dynamic façades',
+            'Supply and installation of aluminium cladding in corten-look finish for a premium, weathered aesthetic',
+            'Installation of stainless steel handrails and tactiles to enhance access and meet DDA compliance',
+            'Supply and fit of crash barriers in basement zones for safety and impact control',
+            'Installation of EV charger posts to support sustainable transport infrastructure',
+            'Installation of bike racks to promote active and commuter-friendly travel'
+        ],
+        highlightsConclusion: 'The outcome combined architectural intent with safety and compliance requirements, with all works delivered on time and aligned with Greensquare’s design and sustainability goals.',
+        scope: [
+            'Supply and installation of architectural feature aluminium fins',
+            'Supply and installation of aluminium corten-look cladding',
+            'Installation of stainless steel handrails and tactile indicators',
+            'Supply and installation of crash barriers in the basement area',
+            'Supply and installation of EV charger posts',
+            'Installation of commercial-grade bike racks'
+        ],
+        scopeConclusion: 'The project was completed through meticulous planning and phased coordination with other trades.',
+        delivery: 'Delivered through a dedicated specialist team within an active construction environment, the project was completed through meticulous planning and phased coordination with other trades. The outcome combined architectural intent with safety and compliance requirements, with all works delivered on time and aligned with Greensquare’s design and sustainability goals.',
+        images: [greensquare1, greensquare2, greensquare3, greensquare4, greensquare5, greensquare6]
+    },
     {
         id: 14,
         slug: 'allianz',
