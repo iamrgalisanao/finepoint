@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import './Portfolio.css';
 
 const Portfolio = ({ projects }) => {
-    const [filter, setFilter] = useState('All');
+    const location = useLocation();
+    const [filter, setFilter] = useState(location.state?.category || 'All');
     const [loadingProject, setLoadingProject] = useState(null);
     const [currentPage, setCurrentPage] = useState(1);
     const [direction, setDirection] = useState(''); // 'slide-left' or 'slide-right'
@@ -102,6 +103,7 @@ const Portfolio = ({ projects }) => {
                                                     <p>{project.location}</p>
                                                     <Link
                                                         to={`/portfolio/${project.slug}`}
+                                                        state={{ fromCategory: filter }}
                                                         className="btn-link"
                                                         onClick={(e) => {
                                                             e.stopPropagation();

@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useLocation } from 'react-router-dom';
 import './ProjectDetails.css';
 
 const ProjectDetails = ({ projects }) => {
     const { slug } = useParams();
+    const location = useLocation();
     const project = projects.find(p => p.slug === slug);
     const [selectedImage, setSelectedImage] = useState(null);
+    const fromCategory = location.state?.fromCategory || 'All';
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -105,7 +107,22 @@ const ProjectDetails = ({ projects }) => {
 
 
                 <div className="cs-back-nav">
-                    <Link to="/#portfolio" className="btn btn-outline">← Back to Portfolio</Link>
+                    {fromCategory !== 'All' && (
+                        <Link
+                            to="/#portfolio"
+                            state={{ category: fromCategory }}
+                            className="btn btn-primary"
+                        >
+                            ← Back to {fromCategory} Projects
+                        </Link>
+                    )}
+                    <Link
+                        to="/#portfolio"
+                        state={{ category: 'All' }}
+                        className="btn btn-outline"
+                    >
+                        {fromCategory === 'All' ? '← Back to Portfolio' : 'View All Projects'}
+                    </Link>
                 </div>
             </div>
 

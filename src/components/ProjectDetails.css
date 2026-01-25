@@ -267,6 +267,22 @@
     margin-top: 4rem;
     display: flex;
     justify-content: center;
+    gap: 2rem;
+}
+
+@media (max-width: 600px) {
+    .cs-back-nav {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+        padding: 0 4rem;
+    }
+
+    .cs-back-nav .btn {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
 }
 
 /* Responsive Adjustments */
