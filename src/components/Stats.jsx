@@ -3,7 +3,7 @@ import './Stats.css';
 
 const Stats = () => {
     const stats = [
-        { label: 'Cumulative Project Value', value: '$2.4B+', icon: '🏗️' },
+        { label: 'Cumulative Project Value', value: '$20M+', icon: '🏗️' },
         { label: 'Technical Specialists', value: '150+', icon: '👷' },
         { label: 'BIM-Optimized Workflows', value: '100%', icon: '🖥️' },
         { label: 'Years of Engineering Mastery', value: '30+', icon: '📐' }

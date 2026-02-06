@@ -327,6 +327,40 @@
     }
 }
 
+/* Small Phones (iPhone SE, etc.) */
+@media (max-width: 375px) {
+    .hero h1 {
+        font-size: 2.2rem;
+        /* Further reduction for small screens */
+        line-height: 1.1;
+    }
+
+    .hero-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .hero-image-stack {
+        height: 320px;
+        /* Reduce height further */
+    }
+
+    .item-main {
+        height: 180px;
+    }
+
+    .item-secondary {
+        height: 120px;
+    }
+
+    .hero-info-card {
+        padding: 1rem;
+    }
+
+    .hero-info-card p {
+        font-size: 0.8rem;
+    }
+}
+
 /* Light Theme Support */
 .light-theme .hero-info-card {
     background: rgba(255, 255, 255, 0.85);

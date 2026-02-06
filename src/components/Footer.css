@@ -308,3 +308,39 @@
         gap: 2rem;
     }
 }
+
+/* Small Phones */
+@media (max-width: 480px) {
+    .cta-heading {
+        font-size: 2rem;
+        /* Reduce from 2.5rem */
+        line-height: 1.2;
+    }
+
+    .cta-subtext {
+        font-size: 1rem;
+    }
+
+    .brand-logo {
+        min-width: 120px;
+        /* Reduce from 140px */
+        font-size: 0.85rem;
+        padding: 10px 20px;
+    }
+
+    .trust-text {
+        font-size: 0.95rem;
+        letter-spacing: 1px;
+        /* Reduce from 2px */
+    }
+
+    .footer {
+        padding: 60px 0 30px;
+        /* Reduce padding */
+    }
+
+    .btn-proposal {
+        padding: 15px 30px;
+        font-size: 0.95rem;
+    }
+}

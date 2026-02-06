@@ -515,11 +515,15 @@
     }
 
     .logo-nav-btn {
-        padding: 1rem 0.2rem;
+        padding: 1.2rem 0.5rem;
+        /* Increased from 1rem for better touch targets */
+        min-height: 60px;
+        /* Ensure minimum touch target size */
     }
 
     .btn-text {
-        font-size: 0.75rem;
+        font-size: 0.85rem;
+        /* Increased from 0.75rem for better readability */
     }
 }
 

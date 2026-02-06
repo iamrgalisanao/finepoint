@@ -10,7 +10,7 @@ const Footer = () => {
         <footer className="footer">
             <div className="container">
                 {/* Brand Trust Bar */}
-                <div className="footer-brand-bar">
+                {/* <div className="footer-brand-bar">
                     <p className="trust-text">Delivering technical excellence for Australia's <br />leading government and commercial partners.</p>
                     <div className="brand-logos">
                         <span className="brand-logo">Canterbury Bankstown</span>
@@ -23,7 +23,7 @@ const Footer = () => {
                         <span className="brand-logo">Nazero</span>
                         <span className="brand-logo">Mackcivil</span>
                     </div>
-                </div>
+                </div> */}
 
                 <div className="footer-main-content">
                     {/* Main CTA Section */}
@@ -68,21 +68,21 @@ const Footer = () => {
                             <div className="icon-circle">📞</div>
                             <div className="text">
                                 <span className="label">Talk to an Expert</span>
-                                <span className="value">Toll Free: (02) 9316 4444</span>
+                                <span className="value">Phone: 0406 472 948</span>
                             </div>
                         </div>
                         <div className="contact-block">
                             <div className="icon-circle">✉️</div>
                             <div className="text">
                                 <span className="label">Have Any Questions?</span>
-                                <span className="value">Mail us: info@finepointprojects.com.au</span>
+                                <span className="value">Mail us: james@finepointprojects.com.au</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div className="footer-copyright">
-                    <p>Copyright & design by FinepointProjects - 2026</p>
+                    <p>Copyright by FinepointProjects - Designed by EloiSoft - 2026</p>
                     <button className="scroll-top-btn" onClick={scrollToTop} aria-label="Scroll to top">
                         ↑
                     </button>

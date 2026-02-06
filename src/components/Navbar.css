@@ -72,7 +72,7 @@
 
 .logo-brand-text {
     display: flex;
-    flex-direction: column;
+    align-items: center;
     justify-content: center;
     line-height: 1;
 }
@@ -80,19 +80,11 @@
 .brand-main {
     font-size: 1.4rem;
     font-weight: 800;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     color: white;
 }
 
-.brand-sub {
-    font-size: 1.4rem;
-    font-weight: 800;
-    letter-spacing: 1px;
-    color: white;
-}
-
-.light-theme .brand-main,
-.light-theme .brand-sub {
+.light-theme .brand-main {
     color: var(--text-primary);
 }
 
@@ -219,8 +211,8 @@
         display: none;
     }
 
-    .brand-main,
-    .brand-sub {
+
+    .brand-main {
         font-size: 1.1rem;
     }
 
@@ -295,8 +287,7 @@
         height: 32px;
     }
 
-    .brand-main,
-    .brand-sub {
+    .brand-main {
         font-size: 0.9rem;
     }
 

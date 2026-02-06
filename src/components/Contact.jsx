@@ -34,21 +34,21 @@ const Contact = () => {
                             <div className="info-icon">📍</div>
                             <div className="info-text">
                                 <h3>Principal Office</h3>
-                                <p>15-17 William St, Botany NSW 2019</p>
+                                <p>14/19 Stanley Street, Woollahra</p>
                             </div>
                         </div>
                         <div className="info-item">
                             <div className="info-icon">📞</div>
                             <div className="info-text">
                                 <h3>Direct Line</h3>
-                                <p>(02) 9316 4444</p>
+                                <p> 0406 472 948</p>
                             </div>
                         </div>
                         <div className="info-item">
                             <div className="info-icon">✉️</div>
                             <div className="info-text">
                                 <h3>General Inquiries</h3>
-                                <p>info@finepointprojects.com.au</p>
+                                <p>james@finepointprojects.com.au</p>
                             </div>
                         </div>
 

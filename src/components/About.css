@@ -375,6 +375,22 @@
 
     .main-image img {
         height: 300px;
+        max-width: 100%;
+    }
+
+    /* Fix floating image overflow */
+    .floating-image {
+        right: 0;
+        /* Changed from -20px to prevent overflow */
+        bottom: 0;
+        /* Changed from -20px */
+        width: 140px;
+        height: 180px;
+    }
+
+    .reversed .floating-image {
+        left: 0;
+        /* Changed from -20px */
     }
 
     .desktop-only {

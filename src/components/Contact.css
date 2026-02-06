@@ -142,4 +142,28 @@
     .info-item p {
         font-size: 1rem;
     }
+
+    /* Optimize form inputs for mobile */
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 0.75rem;
+        /* Reduce from 1rem */
+        font-size: 1rem;
+        /* Ensure readable text */
+    }
+
+    /* Scale down info icons */
+    .info-icon {
+        width: 48px;
+        /* Reduce from 60px */
+        height: 48px;
+        font-size: 1.2rem;
+    }
+
+    /* Increase map height for better visibility */
+    .map-placeholder {
+        height: 250px;
+        /* Increase from 200px */
+    }
 }
